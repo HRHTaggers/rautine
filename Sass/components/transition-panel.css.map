@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,iBAAiB,CAAC;EACd,gBAAgB,EAAE,GAAG;CACxB",
+    "sources": [
+        "transition-panel.scss"
+    ],
+    "names": [],
+    "file": "transition-panel.css"
+}

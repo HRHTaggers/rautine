@@ -1,0 +1,29 @@
+.transition-panel {
+  text-align: center;
+  color: white;
+}
+
+.transition-panel figure {
+  font-size: 6rem;
+}
+
+.transition-panel figcaption {
+  font-size: 2rem;
+}
+
+.transition-panel__now {
+  background-color: red;
+}
+
+.transition-panel__next {
+  background-color: green;
+}
+
+.transition-panel__then {
+  background-color: blue;
+}
+
+.u-margin-bottom-small {
+  padding-bottom: 2rem;
+}
+/*# sourceMappingURL=main.css.map */

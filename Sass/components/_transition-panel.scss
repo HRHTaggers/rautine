@@ -1,0 +1,24 @@
+.transition-panel {
+    text-align: center;
+    color: white;
+
+    & figure {
+        font-size: 6rem;
+    }
+
+    & figcaption {
+        font-size: 2rem;
+    }
+
+    &__now {
+        background-color: red;
+    }
+
+    &__next {
+        background-color: green;
+    }
+
+    &__then {
+        background-color: blue;
+    }
+}

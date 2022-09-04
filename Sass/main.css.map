@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "ACAA,AAAA,iBAAiB,CAAC;EACd,UAAU,EAAE,MAAM;EAClB,KAAK,EAAE,KAAK;CAqBf;;AAvBD,AAII,iBAJa,CAIX,MAAM,CAAC;EACL,SAAS,EAAE,IAAI;CAClB;;AANL,AAQI,iBARa,CAQX,UAAU,CAAC;EACT,SAAS,EAAE,IAAI;CAClB;;AAEA,AAAD,sBAAM,CAAC;EACH,gBAAgB,EAAE,GAAG;CACxB;;AAEA,AAAD,uBAAO,CAAC;EACJ,gBAAgB,EAAE,KAAK;CAC1B;;AAEA,AAAD,uBAAO,CAAC;EACJ,gBAAgB,EAAE,IAAI;CACzB;;ACtBL,AAAA,sBAAsB,CAAC;EACnB,cAAc,EAAE,IAAI;CACvB",
+    "sources": [
+        "main.scss",
+        "components/_transition-panel.scss",
+        "base/_utilities.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}
