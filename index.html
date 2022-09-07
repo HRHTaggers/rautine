@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="description" content="Helen is a front-end engineer based in the United Kingdom.">
-    <title>Helen Ruth Tagliarini - Front-end Design</title>
+    <meta name="description" content="The rAutine app is a tool to support parents and caregivers with signalling transitions to children.">
+    <title>rAutine - dealing with transitions in autism</title>
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
@@ -13,6 +13,10 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600&display=swap" rel="stylesheet">    
     <link href="/Sass/main.css" rel="stylesheet">
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"
@@ -21,13 +25,83 @@
     <script src="script.js"></script>
   </head>
   <body>
-    <h1>
-        What's happening?
-    </h1>
+    <div class="header">
+        <!--<div class="app-name">
+            <div class="app-name__logo">
+                rAutine<span class="copyright-sign">©</span>
+            </div>
+            <div class="app-name__tagline">
+                the transitions app
+            </div>
+        </div>
+    -->
+        <img src="/src/img/rAutine-logo-white.png" alt="rAutine logo" class="header__logo" />
+    </div>
+
+    <div class="routine-input">
+        <form class="routine-input__form" action="submit">
+                <label class="routine-input__form--label">NOW</label>
+                <select name="dropdown">
+                    <optgroup value="Eating">
+                        <option value="Getting dressed">Getting dressed</option>
+                        <option value="Snack">Snack</option>
+                        <option value="Brushing teeth">Brushing teeth</option>
+                    </optgroup>
+                    <option value="Washing hands">Washing hands</option>
+                    <option value="Painting">Painting</option>
+                    <option value="Outside play">Outside play</option>
+                    <option value="Naptime">Naptime</option>
+                    <option value="Mealtime">Mealtime</option>
+                    <option value="Bedtime">Bedtime</option>
+                </select>
+                <button class="routine-input__form--btn">
+                    Add to routine
+                </button>
+                <label class="routine-input__form--label">NEXT</label>
+                <input type="text" class="routine-input__form--input" placeholder="Choose activity" />
+                <button class="routine-input__form--btn">
+                    Add to routine
+                </button>
+                <label class="routine-input__form--label">THEN</label>
+                <input type="text" class="routine-input__form--input" placeholder="Choose activity" />
+                <button class="routine-input__form--btn">
+                    Add to routine
+                </button>
+        </form>
+    </div>
+
+    <div class="choice-panel">
+        <div class="row">
+            <div class="col-sm-2 choice-panel__option-block choice-panel__option-block--food">
+                Snack
+            </div>
+            <div class="col-sm-2 choice-panel__option-block choice-panel__option-block--sleep">
+                Naptime
+            </div>
+            <div class="col-sm-2 choice-panel__option-block choice-panel__option-block--play">
+                Park
+            </div>
+            <div class="col-sm-2 choice-panel__option-block choice-panel__option-block--travel">
+                Car
+            </div>
+            <div class="col-sm-2 choice-panel__option-block choice-panel__option-block--food">
+                Lunch
+            </div>
+            <div class="col-sm-2 choice-panel__option-block choice-panel__option-block--sleep">
+                Bedtime
+            </div>
+        </div>
+    </div>
+
+    <h2 class="subheader">
+        What's happening...?
+    </h2>
     <div class="row transition-panel">
         <div class="col-sm-4 transition-panel__now u-margin-bottom-small">
+            <div class="transition-panel__title">
             NOW
-            <figure>
+            </div>
+            <figure class="transition-panel__icon--now">
                 <i class="fa-solid fa-apple-whole"></i>
             </figure>
             <figcaption>
@@ -35,8 +109,10 @@
             </figcaption>
         </div>
         <div class="col-sm-4 transition-panel__next">
+            <div class="transition-panel__title">
             NEXT
-            <figure>
+            </div>
+            <figure class="transition-panel__icon--next">
                 <i class="fa-solid fa-music"></i>
             </figure>
             <figcaption>
@@ -44,8 +120,10 @@
             </figcaption>
         </div>
         <div class="col-sm-4 transition-panel__then">
+            <div class="transition-panel__title">
             THEN
-            <figure>
+            </div>
+            <figure class="transition-panel__icon--then">
                 <i class="fa-solid fa-pen"></i>
             </figure>
             <figcaption>
@@ -53,5 +131,37 @@
             </figcaption>
         </div>
     </div>
+
+    <footer class="footer">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="footer__app-info">
+                    <!--<div class="app-name__logo">
+                        rAutine<span>©</span>
+                    </div>
+                    <div class="app-name__tagline">
+                        the transitions app
+                    </div>
+                -->
+                    <img src="/src/img/rAutine-logo-white.png" alt="rAutine logo" class="header__logo">
+                    <p class="footer__app-description">
+                        An application to provide a visual routine for children who struggle with transitions in their daily routine.
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-6 footer__attribution">
+                <div class="footer__attribution--design">
+                    Designed by H. Tagliarini for the purposes of educational support - please do not copy or use for the purposes of teaching coding.
+                </div>
+                <br />
+                <div class="footer__attribution--logo">
+                    <img src="/src/img/helen-tagliarini-logo-back-light.png" alt="HT Coding logo" class="brand-logo">
+                </div>
+                <div class="footer__attribution--location">
+                    London, United Kingdom
+                </div>
+            </div>
+        </div>
+    </footer>
   </body>
 </html>
