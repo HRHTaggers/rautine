@@ -1,0 +1,16 @@
+.header {
+    margin: 0;
+    padding: 2rem 0;
+    background: linear-gradient(to bottom right, $background-color, $background-color-dark);
+
+    &__logo {
+        max-height: 20vh;
+    }
+}
+
+.subheader {
+    margin: 0;
+    padding: 2rem 0;
+    background: linear-gradient(to bottom right, $background-color-light, $background-color-dark);
+    color: white;
+}

@@ -1,0 +1,25 @@
+.app-name {
+    color: white;
+
+    &__logo {
+        font-size: 4rem;
+        font-weight: 300;
+
+        &:not(:last-child) {
+            letter-spacing: 0.25rem;
+        }
+    
+        & span {
+            vertical-align: 200%;
+            font-size: 0.75rem;
+            letter-spacing: 0;
+        }
+    
+    }
+
+    &__tagline {
+        margin-bottom: 2rem;
+        font-size: 1.7rem;
+        line-height: 0;
+    }
+}

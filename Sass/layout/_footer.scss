@@ -1,0 +1,10 @@
+.footer {
+    margin: 2rem 0 0 0;
+    padding: 2rem;
+    background: linear-gradient(to bottom right, $background-color, $background-color-dark);
+    color: white;
+
+    &__attribution {
+        font-size: 0.75rem;
+    }
+}

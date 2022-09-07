@@ -1,0 +1,22 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+::selection {
+    background-color: $background-color;
+    color: $text-color-primary;
+}
+
+body {
+    color: $text-color-secondary;
+    font-family: 'Overpass', sans-serif;
+    text-align: center;
+}

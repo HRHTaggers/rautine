@@ -1,0 +1,62 @@
+.choice-panel {
+    margin: 2rem;
+
+    &__option-block {
+        margin: 1rem;
+        padding: 1rem 0.25rem;
+        border-radius: 10px;
+        color: white;
+
+        &--food {
+        background: linear-gradient(to bottom right, $accent-color--3-light, $accent-color--3);
+        transition: all 200ms ease-in-out;
+
+            &:hover {
+                background: linear-gradient(to bottom right, $accent-color--3, $accent-color--3-dark);
+                transform: translateY(1px);
+            }
+        }
+        
+        &--sleep {
+        background: linear-gradient(to bottom right, $accent-color--1-light, $accent-color--1);
+        transition: all 200ms ease-in-out;
+
+            &:hover {
+                background: linear-gradient(to bottom right, $accent-color--1, $accent-color--1-dark);
+                transform: translateY(1px);
+            }
+        
+            &::selection {
+                background-color: $accent-color--1-dark;
+            }
+        }
+
+        &--play {
+        background: linear-gradient(to bottom right, $accent-color--4-light, $accent-color--4);
+        transition: all 200ms ease-in-out;
+
+            &:hover {
+                background: linear-gradient(to bottom right, $accent-color--4, $accent-color--4-dark);
+                transform: translateY(1px);
+            }
+        
+            &::selection {
+                background-color: $accent-color--4-dark;
+            }
+        }
+
+        &--travel {
+        background: linear-gradient(to bottom right, $accent-color--2-light, $accent-color--2);
+        transition: all 200ms ease-in-out;
+
+            &:hover {
+                background: linear-gradient(to bottom right, $accent-color--2, $accent-color--2-dark);
+                transform: translateY(1px);
+            }
+        
+            &::selection {
+                background-color: $accent-color--2-dark;
+            }
+        }
+    }
+}
