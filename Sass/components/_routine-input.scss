@@ -34,5 +34,25 @@
         &--btn::after {
             background: linear-gradient(to bottom right, $accent-color--2-light, $accent-color--2);
         }
+
+        &--dropdown-container {
+            padding: 0.25rem;
+            background-color: $background-color;
+            color: $text-color-secondary;
+            border: none;
+            border-radius: 2px;
+        }
+
+        &--dropdown-category {
+            background-color: $background-color;
+        }
+
+        &--dropdown-option {
+            background-color: white;
+
+            &::selection {
+                background-color: $background-color-dark;
+            }
+        }
     }
 }
