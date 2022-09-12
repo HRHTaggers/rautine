@@ -41,14 +41,25 @@
     </div>
 
     <div class="routine-input">
-        <form class="routine-input__form" action="submit">
+        <form class="routine-input__form">
                 <label class="routine-input__form--label">NOW</label>
-                <select name="dropdown" class="routine-input__form--dropdown-container-activity-now">
+                <select name="dropdown" class="routine-input__form--dropdown-container routine-input__form--dropdown-container-activity-now">
 
                 </select>
-                <select name="dropdown" class="routine-input__form--dropdown-container-timing-now">
+                <input type="time" class="routine-input__form--timing-now" placeholder="add finish time" />
+                <button class="routine-input__form--btn-now">
+                    Add to routine
+                </button>
+                <label class="routine-input__form--label">NEXT</label>
+                <select name="dropdown" class="routine-input__form--dropdown-container routine-input__form--dropdown-container-activity-next">
 
                 </select>
+                <input type="time" class="routine-input__form--timing-next" placeholder="add finish time" />
+                <label class="routine-input__form--label">THEN</label>
+                <select name="dropdown" class="routine-input__form--dropdown-container routine-input__form--dropdown-container-activity-then">
+
+                </select>
+                <input type="time" class="routine-input__form--timing-then" placeholder="add finish time" />
                 <!--<select name="dropdown" class="routine-input__form--dropdown-container" autofocus="off">
                     <optgroup label="Eat" class="routine-input__form--dropdown-category">
                         <option value="Breakfast" class="routine-input__form--dropdown-option">Breakfast</option>
@@ -82,8 +93,8 @@
                         <option value="Getting dressed">Getting dressed</option>
                     </optgroup>
                 </select>
-            -->
-                <button class="routine-input__form--btn">
+
+                <button class="routine-input__form--btn-now">
                     Add to routine
                 </button>
                 <label class="routine-input__form--label">NEXT</label>
@@ -96,6 +107,7 @@
                 <button class="routine-input__form--btn">
                     Add to routine
                 </button>
+            -->
         </form>
     </div>
 

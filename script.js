@@ -22,10 +22,27 @@ const renderactivity = function(activity, category, icon) {
 */
 
 //DOM REFERENCES
-const dropdownContainerActivity = document.querySelector(`.routine-input__form--dropdown-container-activity-now`);
-const dropdownContainerTiming = document.querySelector(`.routine-input__form--dropdown-container-timing-now`);
+const activityFormNow = document.querySelector(`.routine-input__form`);
+const dropdownContainerActivityNow = document.querySelector(`.routine-input__form--dropdown-container-activity-now`);
+const dropdownContainerActivityThen = document.querySelector(
+  `.routine-input__form--dropdown-container-activity-then`
+);
+const dropdownContainerActivityNext = document.querySelector(
+  `.routine-input__form--dropdown-container-activity-next`
+);
+const dropdownContainerTimingNow = document.querySelector(`.routine-input__form--timing-now`);
+const dropdownContainerTimingNext = document.querySelector(
+  `.routine-input__form--timing-next`
+);
+const dropdownContainerTimingThen = document.querySelector(
+  `.routine-input__form--timing-then`
+);
+const dropdownContainersAll = document.querySelectorAll(`.routine-input__form--dropdown-container`);
 const headerDate = document.querySelector(`.header__date`);
 const activityNow = document.querySelector(`.transition-panel__description--now`);
+const timeRemainingNow = document.querySelector(`.transition-panel__time--now`);
+const timingNow = document.querySelector(`.routine-input__form--timing-now`);
+const submitBtnNow = document.querySelector(`.routine-input__form--btn-now`);
 
 //DATA OBJECTS
 const activityData = [
@@ -46,71 +63,64 @@ const activityData = [
     }
 ];
 
-const timingData = [
-  {
-    name: 5,
-    category: "short-term",
-    color: "red",
-  },
-  {
-    name: 10,
-    category: "short-term",
-    color: "amber",
-  },
-  {
-    name: 15,
-    category: "medium-term",
-    color: "amber",
-  },
-];
-
 console.log(activityData);
 
+const today = new Date();
+const seconds = today.getSeconds();
+const hours = today.getHours();
+const minutes = today.getMinutes();
+const totalMinutesNow = (+hours * 60) + +minutes;
+console.log(totalMinutesNow);
+
 //SET TIME
-const setDate = function() {
+setInterval(() => { 
+    function setDate() {
 
-    //Get date & time
-    const today = new Date();
-    
-    //Convert date & time to string
-    const hours = today.getHours();
-    const minutes = today.getMinutes();
-    const weekdays = [
-        `monday`,
-        `tuesday`,
-        `wednesday`,
-        `thursday`,
-        `friday`,
-        `saturday`,
-        `sunday`
-    ];
-    const weekday = weekdays[(today.getDay() - 1)];
-    const date = today.getDate();
-    const months = [
-        "january",
-        "february",
-        "march",
-        "april",
-        "may",
-        "june",
-        "july",
-        "august",
-        "september",
-        "october",
-        "november",
-        "december"
-    ];
-    const month = months[today.getMonth() - 1];
-    const year = today.getFullYear();
-    
-    //Insert date & time to DOM
-    headerDate.innerHTML = `${weekday}, ${date} ${month} ${year}, ${hours < 12 ? `0` : ``}${hours}:${minutes < 10 ? `0` : ``}${minutes}`;
+        //Get date & time
+        const today = new Date();
+        
+        //Convert date & time to string
+        const hours = today.getHours();
+        const minutes = today.getMinutes();
+        const weekdays = [
+            `monday`,
+            `tuesday`,
+            `wednesday`,
+            `thursday`,
+            `friday`,
+            `saturday`,
+            `sunday`
+        ];
+        const weekday = weekdays[(today.getDay() - 1)];
+        const date = today.getDate();
+        const months = [
+            "january",
+            "february",
+            "march",
+            "april",
+            "may",
+            "june",
+            "july",
+            "august",
+            "september",
+            "october",
+            "november",
+            "december"
+        ];
+        const month = months[today.getMonth() - 1];
+        const year = today.getFullYear();
+        
+        //Insert date & time to DOM
+        headerDate.innerHTML = `${weekday}, ${date} ${month} ${year}, ${hours < 12 ? `0` : ``}${hours}:${minutes < 10 ? `0` : ``}${minutes}`;
 
-    const updateTime = setTimeout(function() {setDate()}, 60000);
-};
+        } setDate();
+    }, 1000
+);
+//window.setInterval(setDate, 1000);
+
 
 //DYNAMIC DROPDOWN - ACTIVITIES
-const createDropdown = function(array, i, parentEl) {
+const createDropdown = function (array, i, parentEl) {
 
     for(i = 0; i < array.length; i++) {
         let option = document.createElement(`option`);
@@ -118,8 +128,8 @@ const createDropdown = function(array, i, parentEl) {
         option.textContent = array[i].name;
         option.classList.add(`option-${array[i].name}`);
         parentEl.appendChild(option);
-        console.log(option);
     }
+
 };
 
 /*for (let key in activityData) {
@@ -133,25 +143,49 @@ const createDropdown = function(array, i, parentEl) {
 }
 */
 
-//CREATE ACTIVITY
-
-
 //SET ACTIVITY & TIMING FROM DROPDOWNS
 const selectActivity = function(event) {
     event.preventDefault();
 
-    const selectedActivity = dropdownContainerActivity.value;
-    console.log(selectedActivity);
+    const selectedActivity = dropdownContainerActivityNow.value;
+
+    const finishTime = dropdownContainerTimingNow.value;
+
+    const finishHour = finishTime.slice(0, 2) * 60;
+    const finishMinute = finishTime.slice(3, 5);
+    const totalMinutesEnd = +finishHour + +finishMinute;
+    const timeRemaining = totalMinutesEnd - totalMinutesNow;
+    
+    timeRemainingNow.innerHTML = `Time left: ${timeRemaining} minutes`;
     activityNow.innerHTML = selectedActivity;
+
+    //timeRemainingNow.innerHTML = `Time left: ${timeRemaining} minutes`;
+
 };
 
-dropdownContainerActivity.addEventListener(`click`, selectActivity);
+//activityFormNow.addEventListener(`submit`, selectActivity);
+submitBtnNow.addEventListener(`click`, selectActivity);
+
+//CALCULATE REMAINING TIME FOR ACTIVITY
+//const setIntervalTime = setInterval(
+  //  selectActivity(), 1000
+//);
+
+/*const calculateTiming = function() {
+    const finishTime = timingNow.value;
+    console.log(finishTime);
+    const timeRemaining = finishTime - (hours - minutes);
+    timeRemainingNow.innerHTML = `Time left: ${timeRemaining} minutes`;
+};
+
+submitBtnNow.addEventListener(`submit`, calculateTiming);
+*/
 
 //INITIALIZATION FUNCTION
 const init = function() {
-    createDropdown(activityData, 0, dropdownContainerActivity);
-    createDropdown(timingData, 0, dropdownContainerTiming);
-    setDate();
+    createDropdown(activityData, 0, dropdownContainerActivityNow);
+    createDropdown(activityData, 0, dropdownContainerActivityNext);
+    createDropdown(activityData, 0, dropdownContainerActivityThen);
 };
 
 init();
