@@ -1,76 +1,39 @@
-/*const activities = [
-    {
-        activity: `Snack`,
-        category: `Eat`,
-        icon: ``
-    },
-    {
-        activity: `Nap`,
-        category: `Sleep`,
-        icon: ``
-    },
-    {
-        activity: `Music`,
-        category: `Play`,
-        icon: ``
-    }
-];
-
-const renderactivity = function(activity, category, icon) {
-    forEach()
-}
-*/
+`use strict`;
 
 //DOM REFERENCES
 const activityFormNow = document.querySelector(`.routine-input__form`);
 const dropdownContainerActivityNow = document.querySelector(`.routine-input__form--dropdown-container-activity-now`);
-const dropdownContainerActivityThen = document.querySelector(
-  `.routine-input__form--dropdown-container-activity-then`
-);
-const dropdownContainerActivityNext = document.querySelector(
-  `.routine-input__form--dropdown-container-activity-next`
-);
+const dropdownContainerActivityThen = document.querySelector(`.routine-input__form--dropdown-container-activity-then`);
+const dropdownContainerActivityNext = document.querySelector(`.routine-input__form--dropdown-container-activity-next`);
 const dropdownContainerTimingNow = document.querySelector(`.routine-input__form--timing-now`);
-const dropdownContainerTimingNext = document.querySelector(
-  `.routine-input__form--timing-next`
-);
-const dropdownContainerTimingThen = document.querySelector(
-  `.routine-input__form--timing-then`
-);
+const dropdownContainerTimingNext = document.querySelector(`.routine-input__form--timing-next`);
+const dropdownContainerTimingThen = document.querySelector(`.routine-input__form--timing-then`);
 const dropdownContainersAll = document.querySelectorAll(`.routine-input__form--dropdown-container`);
 const headerDate = document.querySelector(`.header__date`);
-const activityNow = document.querySelector(`.transition-panel__description--now`);
+const activityIconNow = document.querySelector(`.transition-panel__icon--now`);
+const activityDescNow = document.querySelector(`.transition-panel__description--now`);
 const timeRemainingNow = document.querySelector(`.transition-panel__time--now`);
 const timingNow = document.querySelector(`.routine-input__form--timing-now`);
 const submitBtnNow = document.querySelector(`.routine-input__form--btn-now`);
 
 //DATA OBJECTS
 const activityData = [
-    {
-        name: "Snack",
-        category: "Eat",
-        Icon: "",
-    },
-    {
-        name: "Sleep",
-        category: "Nap",
-        Icon: "",
-    },
-    {
-        name: "Play",
-        category: "Music",
-        Icon: "",
-    }
+  {
+    name: "Snack",
+    category: "Eat",
+    icon: `<i class="fa-solid fa-apple-whole"></i>`,
+  },
+  {
+    name: "Nap",
+    category: "Sleep",
+    icon: `<i class="fa-solid fa-bed"></i>`,
+  },
+  {
+    name: "Music",
+    category: "Play",
+    icon: `<i class="fa-solid fa-music"></i>`,
+  },
 ];
-
-console.log(activityData);
-
-const today = new Date();
-const seconds = today.getSeconds();
-const hours = today.getHours();
-const minutes = today.getMinutes();
-const totalMinutesNow = (+hours * 60) + +minutes;
-console.log(totalMinutesNow);
 
 //SET TIME
 setInterval(() => { 
@@ -116,7 +79,6 @@ setInterval(() => {
         } setDate();
     }, 1000
 );
-//window.setInterval(setDate, 1000);
 
 
 //DYNAMIC DROPDOWN - ACTIVITIES
@@ -132,54 +94,41 @@ const createDropdown = function (array, i, parentEl) {
 
 };
 
-/*for (let key in activityData) {
-    let option = document.createElement("option");
-    option.setAttribute(`value`, data[key]);
-
-    let optionText = document.createTextNode("key");
-    option.appendChild(optionText);
-
-    dropdownContainer.appendChild(option);
-}
-*/
-
-//SET ACTIVITY & TIMING FROM DROPDOWNS
+//SET ACTIVITY & TIMING IN PANEL FROM DROPDOWNS
 const selectActivity = function(event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    const selectedActivity = dropdownContainerActivityNow.value;
+  //Update activity from dropdown selection in DOM - decription & icon
+  const selectedActivity = dropdownContainerActivityNow.value;
+  activityDescNow.innerHTML = selectedActivity;
+  activityIconNow.innerHTML = activityData[dropdownContainerActivityNow.selectedIndex].icon;
 
-    const finishTime = dropdownContainerTimingNow.value;
 
-    const finishHour = finishTime.slice(0, 2) * 60;
-    const finishMinute = finishTime.slice(3, 5);
-    const totalMinutesEnd = +finishHour + +finishMinute;
-    const timeRemaining = totalMinutesEnd - totalMinutesNow;
-    
-    timeRemainingNow.innerHTML = `Time left: ${timeRemaining} minutes`;
-    activityNow.innerHTML = selectedActivity;
+  //Update remaining time for activity
+  //Set finish time from dropdown selection
+  setInterval(() => {
+    function setFinishTime() {
+      const finishTime = dropdownContainerTimingNow.value;
+      const finishHour = finishTime.slice(0, 2) * 60;
+      const finishMinute = finishTime.slice(3, 5);
+      const totalMinutesEnd = +finishHour + +finishMinute;
 
-    //timeRemainingNow.innerHTML = `Time left: ${timeRemaining} minutes`;
+      //Set current time
+      const today = new Date();
+      const hours = today.getHours();
+      const minutes = today.getMinutes();
+      const totalMinutesNow = +hours * 60 + +minutes;
+
+      //Calculate remaining time & update DOM
+      const timeRemaining = totalMinutesEnd - totalMinutesNow;
+      timeRemainingNow.innerHTML = `Time left: ${timeRemaining} minutes`;
+    }
+    setFinishTime();
+  }, 1000);
 
 };
 
-//activityFormNow.addEventListener(`submit`, selectActivity);
 submitBtnNow.addEventListener(`click`, selectActivity);
-
-//CALCULATE REMAINING TIME FOR ACTIVITY
-//const setIntervalTime = setInterval(
-  //  selectActivity(), 1000
-//);
-
-/*const calculateTiming = function() {
-    const finishTime = timingNow.value;
-    console.log(finishTime);
-    const timeRemaining = finishTime - (hours - minutes);
-    timeRemainingNow.innerHTML = `Time left: ${timeRemaining} minutes`;
-};
-
-submitBtnNow.addEventListener(`submit`, calculateTiming);
-*/
 
 //INITIALIZATION FUNCTION
 const init = function() {
