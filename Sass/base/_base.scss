@@ -20,11 +20,3 @@ body {
     font-family: 'Overpass', sans-serif;
     text-align: center;
 }
-
-.timeline-container {
-    margin: 3rem;
-    padding: 2rem;
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: 10vw repeat(15, 1fr);
-}

@@ -21,11 +21,12 @@
 
   </head>
   <body>
-      <div class="timeline-link">
+    <!--  <div class="timeline-link">
         <a href="/timeline.html" class="timeline-link">    
             timeline
         </a>
         </div>
+    -->
     <div class="header">
         <!--<div class="app-name">
             <div class="app-name__logo">
@@ -41,73 +42,39 @@
     </div>
 
     <div class="routine-input">
-        <form class="routine-input__form">
+        <form class="routine-input__form row">
+            <div class="col-sm-4">
                 <label class="routine-input__form--label">NOW</label>
                 <select name="dropdown" class="routine-input__form--dropdown-container routine-input__form--dropdown-container-activity-now">
 
                 </select>
-                <input type="time" class="routine-input__form--timing-now" placeholder="add finish time" />
-                <button class="routine-input__form--btn-now">
+                <input type="time" class="routine-input__form--timing routine-input__form--timing-now" placeholder="add finish time" />
+                <!--<button class="routine-input__form--btn-now btn">
                     Add to routine
-                </button>
+                </button>-->
+            </div>
+            <div class="col-sm-4">
                 <label class="routine-input__form--label">NEXT</label>
                 <select name="dropdown" class="routine-input__form--dropdown-container routine-input__form--dropdown-container-activity-next">
 
                 </select>
-                <input type="time" class="routine-input__form--timing-next" placeholder="add finish time" />
+                <input type="time" class="routine-input__form--timing routine-input__form--timing-next" placeholder="add finish time" />
+                <!--<button class="routine-input__form--btn-next btn">
+                    Add to routine
+                </button>-->   
+            </div>
+            <div class="col-sm-4">            
                 <label class="routine-input__form--label">THEN</label>
                 <select name="dropdown" class="routine-input__form--dropdown-container routine-input__form--dropdown-container-activity-then">
 
                 </select>
-                <input type="time" class="routine-input__form--timing-then" placeholder="add finish time" />
-                <!--<select name="dropdown" class="routine-input__form--dropdown-container" autofocus="off">
-                    <optgroup label="Eat" class="routine-input__form--dropdown-category">
-                        <option value="Breakfast" class="routine-input__form--dropdown-option">Breakfast</option>
-                        <option value="Snack" class="routine-input__form--dropdown-option">Snack</option>
-                        <option value="Lunch" class="routine-input__form--dropdown-option">Lunch</option>
-                        <option value="Dinner" class="routine-input__form--dropdown-option">Dinner</option>
-                    </optgroup>
-                    <optgroup label="Sleep">
-                        <option value="Nap" class="routine-input__form--dropdown-option">Nap</option>
-                        <option value="Bed" class="routine-input__form--dropdown-option">Bed</option>
-                    </optgroup>
-                    <optgroup label="Play">
-                        <option value="Painting" class="routine-input__form--dropdown-option">Painting</option>
-                        <option value="Reading" class="routine-input__form--dropdown-option">Reading</option>
-                        <option value="Music" class="routine-input__form--dropdown-option">Music</option>
-                        <option value="Outside play" class="routine-input__form--dropdown-option">Outside play</option>
-                    </optgroup>
-                    <optgroup label="Travel">
-                        <option value="Car" class="routine-input__form--dropdown-option">Car</option>
-                        <option value="Bus" class="routine-input__form--dropdown-option">Bus</option>
-                        <option value="Train" class="routine-input__form--dropdown-option">Train</option>
-                    </optgroup>
-                    <optgroup label="Hygiene">
-                        <option value="Brushing teeth" class="routine-input__form--dropdown-option">Brushing teeth</option>
-                        <option value="Brushing hair" class="routine-input__form--dropdown-option">Brushing hair</option>
-                        <option value="Washing hands" class="routine-input__form--dropdown-option">Washing hands</option>
-                        <option value="Toilet" class="routine-input__form--dropdown-option">Toilet</option>
-                        <option value="Bath" class="routine-input__form--dropdown-option">Bathtime</option>
-                    </optgroup>
-                    <optgroup label="Routine">
-                        <option value="Getting dressed">Getting dressed</option>
-                    </optgroup>
-                </select>
-
-                <button class="routine-input__form--btn-now">
-                    Add to routine
+                <input type="time" class="routine-input__form--timing routine-input__form--timing-then" placeholder="add finish time" />
+            </div>
+            <div class="routine-input__update">
+                <button class="routine-input__form--btn btn">
+                    Update routine
                 </button>
-                <label class="routine-input__form--label">NEXT</label>
-                <input type="text" class="routine-input__form--input" placeholder="Choose activity" />
-                <button class="routine-input__form--btn">
-                    Add to routine
-                </button>
-                <label class="routine-input__form--label">THEN</label>
-                <input type="text" class="routine-input__form--input" placeholder="Choose activity" />
-                <button class="routine-input__form--btn">
-                    Add to routine
-                </button>
-            -->
+            </div>       
         </form>
     </div>
 
@@ -139,6 +106,7 @@
     <h2 class="subheader">
         What's happening...?
     </h2>
+    <div class="transition-panel__test"></div>
     <div class="row transition-panel">
         <div class="col-sm-4 transition-panel__now u-margin-bottom-small">
             <div class="transition-panel__title">
@@ -160,10 +128,14 @@
             NEXT
             </div>
             <figure class="transition-panel__icon--next">
-                <i class="fa-solid fa-music"></i>
+                <i class="fa-solid fa-question"></i>
             </figure>
-            <figcaption>
-                Songtime
+            <figcaption class="transition-panel__description--next">
+                *****
+            </figcaption>
+            <figcaption class="transition-panel__time--next">
+                Time left:
+                <span>** minutes</span>
             </figcaption>
         </div>
         <div class="col-sm-4 transition-panel__then">
@@ -171,17 +143,21 @@
             THEN
             </div>
             <figure class="transition-panel__icon--then">
-                <i class="fa-solid fa-pen"></i>
+                <i class="fa-solid fa-question"></i>
             </figure>
-            <figcaption>
-                Writing Lesson
+            <figcaption class="transition-panel__description--then">
+                *****
+            </figcaption>
+            <figcaption class="transition-panel__time--then">
+                Time left:
+                <span>** minutes</span>
             </figcaption>
         </div>
     </div>
 
     <footer class="footer">
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-8">
                 <div class="footer__app-info">
                     <!--<div class="app-name__logo">
                         rAutine<span>©</span>
@@ -196,7 +172,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col-sm-6 footer__attribution">
+            <div class="col-sm-4 footer__attribution">
                 <div class="footer__attribution--design">
                     Designed by H. Tagliarini for the purposes of educational support - please do not copy or use for the purposes of teaching coding.
                 </div>

@@ -35,14 +35,14 @@
     }
 
     &__now {
-        background: linear-gradient(to bottom right, #91ad92, #4CAF50);
+        background: linear-gradient(to bottom right, $accent-color--4-light, $accent-color--4-dark);
     }
 
     &__next {
-        background: linear-gradient(to bottom right, #63cad8, #00BCD4);
+        background: linear-gradient(to bottom right, $accent-color--5-light, $accent-color--5-dark);
     }
 
     &__then {
-        background: linear-gradient(to bottom right, #4395d3, #0374ca);
+        background: linear-gradient(to bottom right, $accent-color--2-light, $accent-color--2-dark);
     }
 }
