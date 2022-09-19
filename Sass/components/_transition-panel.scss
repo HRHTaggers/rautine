@@ -10,8 +10,16 @@
         border-radius: 180px;
     }
 
-    & figcaption {
+    &__description--now,
+    &__description--next,
+    &__description--then {
         font-size: 2rem;
+    }
+
+    &__time--now,
+    &__time--next,
+    &__time--then {
+        font-size: 1.2rem;
     }
 
     &__icon {

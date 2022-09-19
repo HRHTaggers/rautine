@@ -15,7 +15,15 @@
     }
 }
 
-.subheader {
+.subheader-1 {
+    margin: 0;
+    padding: 1rem 0;
+    background: linear-gradient(to bottom right, $accent-color--3-light, $accent-color--3-dark);
+    color: white;
+    font-size: 1.6rem;
+}
+
+.subheader-2 {
     margin: 0;
     padding: 1rem 0;
     background: linear-gradient(to bottom right, $background-color-light, $background-color-dark);
