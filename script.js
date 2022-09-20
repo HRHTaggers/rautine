@@ -117,7 +117,7 @@ setInterval(() => {
             `saturday`,
             `sunday`
         ];
-        const weekday = weekdays[today.getDay() < 0 ? today.getDay() - 1 : 0];
+        const weekday = weekdays[today.getDay() > 1 ? today.getDay() - 1 : 0];
         const date = today.getDate();
         const months = [
             "january",
