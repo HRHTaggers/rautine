@@ -230,6 +230,11 @@ const selectActivity = function(event) {
   }, 1000);
 };
 
+//SET START TIME FOR NEXT ACTIVITY BASED ON PREVIOUS INPUT
+const setStartTime = (timingNow) => {
+  timingNext.value = timingNow.value;
+};
+
 //EVENT LISTENERS
 //submitBtnNow.addEventListener(`click`, selectActivity);
 //submitBtnNext.addEventListener(`click`, selectActivity);
