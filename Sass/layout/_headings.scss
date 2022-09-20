@@ -5,6 +5,15 @@
 
     &__logo {
         max-height: 20vh;
+
+        @include respond(tab-land) {
+            max-height: 15vh;
+        }
+
+        @include respond(phone) {
+            max-height: 12vh;
+            margin: 1.5rem 0 0.5rem 0;
+        }
     }
 
     &__date {
@@ -12,21 +21,25 @@
         text-align: left;
         color: white;
         font-size: 0.75rem;
+
+        @include respond(phone) {
+            text-align: center;
+        }
     }
 }
 
-.subheader-1 {
+.subheader-1,
+.subheader-2 {
     margin: 0;
-    padding: 1rem 0;
-    background: linear-gradient(to bottom right, $accent-color--3-light, $accent-color--3-dark);
+    padding: 1rem 0 0.6rem 0;
     color: white;
     font-size: 1.6rem;
 }
 
+.subheader-1 {
+    background: linear-gradient(to bottom right, $accent-color--3-light, $accent-color--3-dark);
+}
+
 .subheader-2 {
-    margin: 0;
-    padding: 1rem 0;
     background: linear-gradient(to bottom right, $background-color-light, $background-color-dark);
-    color: white;
-    font-size: 1.6rem;
 }

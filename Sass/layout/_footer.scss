@@ -4,6 +4,18 @@
     background: linear-gradient(to bottom right, $background-color, $background-color-dark);
     color: white;
 
+    &__logo {
+        max-height: 17vh;
+
+        @include respond(tab-land) {
+            max-height: 8vh;
+        }
+
+        @include respond(phone) {
+            max-height: 10vh;
+        }
+    }
+
     &__attribution {
         margin: auto;
         font-size: 0.75rem;

@@ -129,12 +129,18 @@
 }
 
 .instructions__list {
-  padding-top: 1rem;
+  padding: 1rem 1rem 0 1rem;
   list-style: none;
 }
 
 .instructions__paragraph {
   padding: 1rem 1rem 0 1rem;
+}
+
+@media screen and (max-width: 37.5em) {
+  .instructions__paragraph {
+    margin: 0;
+  }
 }
 
 .routine-input {
@@ -231,6 +237,7 @@
 }
 
 .transition-panel {
+  margin: 0;
   text-align: center;
   color: white;
 }
@@ -297,6 +304,24 @@ html {
   font-size: 100%;
 }
 
+@media screen and (max-width: 75em) {
+  html {
+    font-size: 80%;
+  }
+}
+
+@media screen and (max-width: 56.25em) {
+  html {
+    font-size: 70%;
+  }
+}
+
+@media screen and (max-width: 37.5em) {
+  html {
+    font-size: 60%;
+  }
+}
+
 ::-moz-selection {
   background-color: #a9dfef;
   color: #212121;
@@ -327,6 +352,22 @@ body {
   background: -webkit-gradient(linear, left top, right bottom, from(#a9dfef), to(#0390bb));
   background: linear-gradient(to bottom right, #a9dfef, #0390bb);
   color: white;
+}
+
+.footer__logo {
+  max-height: 17vh;
+}
+
+@media screen and (max-width: 75em) {
+  .footer__logo {
+    max-height: 8vh;
+  }
+}
+
+@media screen and (max-width: 37.5em) {
+  .footer__logo {
+    max-height: 10vh;
+  }
 }
 
 .footer__attribution {
@@ -370,6 +411,19 @@ body {
   max-height: 20vh;
 }
 
+@media screen and (max-width: 75em) {
+  .header__logo {
+    max-height: 15vh;
+  }
+}
+
+@media screen and (max-width: 37.5em) {
+  .header__logo {
+    max-height: 12vh;
+    margin: 1.5rem 0 0.5rem 0;
+  }
+}
+
 .header__date {
   margin: 0 2rem;
   text-align: left;
@@ -377,21 +431,27 @@ body {
   font-size: 0.75rem;
 }
 
-.subheader-1 {
+@media screen and (max-width: 37.5em) {
+  .header__date {
+    text-align: center;
+  }
+}
+
+.subheader-1,
+.subheader-2 {
   margin: 0;
-  padding: 1rem 0;
-  background: -webkit-gradient(linear, left top, right bottom, from(#febc76), to(#fc8303));
-  background: linear-gradient(to bottom right, #febc76, #fc8303);
+  padding: 1rem 0 0.6rem 0;
   color: white;
   font-size: 1.6rem;
 }
 
+.subheader-1 {
+  background: -webkit-gradient(linear, left top, right bottom, from(#febc76), to(#fc8303));
+  background: linear-gradient(to bottom right, #febc76, #fc8303);
+}
+
 .subheader-2 {
-  margin: 0;
-  padding: 1rem 0;
   background: -webkit-gradient(linear, left top, right bottom, from(#9ee8ff), to(#0390bb));
   background: linear-gradient(to bottom right, #9ee8ff, #0390bb);
-  color: white;
-  font-size: 1.6rem;
 }
 /*# sourceMappingURL=main.css.map */

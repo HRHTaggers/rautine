@@ -216,7 +216,7 @@ const selectActivity = function(event) {
       const minutes = today.getMinutes();
       const totalMinutesNow = +hours * 60 + +minutes;
 
-      //Calculate remaining time & update DOM
+      //Calculate remaining time & update DOM - Now, Next, Then
       const timeRemaining = totalMinutesEnd - totalMinutesNow;
       timeRemainingNow.innerHTML = `Time left: ${timeRemaining} minutes`;
 
