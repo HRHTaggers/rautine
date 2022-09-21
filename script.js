@@ -28,6 +28,10 @@ const activityDescThen = document.querySelector(`.transition-panel__description-
 const timeRemainingThen = document.querySelector(`.transition-panel__time--then`);
 const timingThen = document.querySelector(`.routine-input__form--timing-then`);
 
+//Timeline
+const timelineContainer = document.querySelector(`.timeline-container__test`);
+const progressContainer = document.querySelector(`.timeline__progress`);
+
 //Buttons
 const submitBtn = document.querySelector(`.routine-input__form--btn`);
 
@@ -97,6 +101,48 @@ const transitionData = [
         capital: `Then`
     }
 ];
+
+//GENERATE TIMELINE HOURS
+const generateTimeline = (i = 6, parentEl) => {
+    let hours = new Date().getHours();
+    let hour = 6;
+    for (i = 6; i < 21; i++) {
+        hour++;
+        const time = document.createElement(`div`);
+        time.textContent = `${hour}:00`;
+        time.setAttribute(`class`, `${hour}00 timeline-hour col`);
+        time.setAttribute(`id`, `${hour}`);
+        if(hour < hours) {
+            time.style.backgroundColor = `$accent-color--2`
+        };
+        parentEl.append(time);
+
+    };
+};
+
+generateTimeline(6, timelineContainer);
+
+//GENERATE TIMELINE PROGRESS COLOR CODE
+const generateProgressLine = (i = 6, parentEl) => {
+  let hours = new Date().getHours();
+  let hour = 6;
+  for (i = 6; i < 21; i++) {
+    hour++;
+    const progress = document.createElement(`div`);
+    progress.textContent = hour;
+    progress.style.color = `transparent`;
+    progress.setAttribute(`class`, `${hour}00 progress-hour col`);
+    progress.setAttribute(`id`, `${hour}-progress`);
+    if (hour < hours)
+      progress.style.backgroundColor = `green`;
+    if (hour > hours)
+        progress.style.backgroundColor = `blue`;
+    if (hour === hours) progress.style.backgroundColor = `orange`;
+    parentEl.append(progress);
+  }
+};
+
+generateProgressLine(6, progressContainer);
 
 //SET TIME
 setInterval(() => { 
@@ -250,15 +296,10 @@ function init() {
 
 init();
 
-/*
+
 //TIMELINE HTML
-//SET ACTIVITY IN TIMELINE
-const setTimelineActivity = function(event) {
-    event.preventDefault();
 
-
-}
-
+/*
 //SET PROGRESS IN TIMELINE
 const setTimelineColor = function(event) {
     event.preventDefault();
