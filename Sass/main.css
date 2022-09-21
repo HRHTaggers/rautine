@@ -360,7 +360,7 @@ body {
 
 @media screen and (max-width: 75em) {
   .footer__logo {
-    max-height: 8vh;
+    max-height: 14vh;
   }
 }
 
