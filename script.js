@@ -112,9 +112,6 @@ const generateTimeline = (i = 6, parentEl) => {
         time.textContent = `${hour}:00`;
         time.setAttribute(`class`, `${hour}00 timeline-hour col`);
         time.setAttribute(`id`, `${hour}`);
-        if(hour < hours) {
-            time.style.backgroundColor = `$accent-color--2`
-        };
         parentEl.append(time);
 
     };
@@ -126,7 +123,7 @@ generateTimeline(6, timelineContainer);
 const generateProgressLine = (i = 6, parentEl) => {
   let hours = new Date().getHours();
   let hour = 6;
-  for (i = 6; i < 21; i++) {
+  for (i = 6; i < 24; i++) {
     hour++;
     const progress = document.createElement(`div`);
     progress.textContent = hour;
@@ -134,10 +131,10 @@ const generateProgressLine = (i = 6, parentEl) => {
     progress.setAttribute(`class`, `${hour}00 progress-hour col`);
     progress.setAttribute(`id`, `${hour}-progress`);
     if (hour < hours)
-      progress.style.backgroundColor = `green`;
+      progress.style.backgroundColor = `#5fdc63`;
     if (hour > hours)
-        progress.style.backgroundColor = `blue`;
-    if (hour === hours) progress.style.backgroundColor = `orange`;
+        progress.style.backgroundColor = `#a9dfef`;
+    if (hour === hours) progress.style.backgroundColor = `#febc76`;
     parentEl.append(progress);
   }
 };
