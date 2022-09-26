@@ -71,6 +71,11 @@ const activityData = [
     icon: `<i class="fa-solid fa-music"></i>`,
   },
   {
+    name: "Playgroup",
+    category: "Play",
+    icon: `<i class="fa-solid fa-school"></i>`,
+  },
+  {
     name: "Outdoor",
     category: "Play",
     icon: `<i class="fa-solid fa-tree"></i>`,
@@ -81,9 +86,14 @@ const activityData = [
     icon: `<i class="fa-brands fa-readme"></i>`,
   },
   {
-    name: "Maths",
+    name: "Shopping",
     category: "Learning",
-    icon: `<i class="fa-solid fa-plus"></i>`,
+    icon: `<i class="fa-solid fa-basket-shopping"></i>`,
+  },
+  {
+    name: "Car",
+    category: "Travel",
+    icon: `<i class="fa-solid fa-car-side"></i>`,
   },
 ];
 
