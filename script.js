@@ -102,45 +102,6 @@ const transitionData = [
     }
 ];
 
-//GENERATE TIMELINE HOURS
-const generateTimeline = (i = 6, parentEl) => {
-    let hours = new Date().getHours();
-    let hour = 6;
-    for (i = 6; i < 21; i++) {
-        hour++;
-        const time = document.createElement(`div`);
-        time.textContent = `${hour}:00`;
-        time.setAttribute(`class`, `${hour}00 timeline-hour col`);
-        time.setAttribute(`id`, `${hour}`);
-        parentEl.append(time);
-
-    };
-};
-
-generateTimeline(6, timelineContainer);
-
-//GENERATE TIMELINE PROGRESS COLOR CODE
-const generateProgressLine = (i = 6, parentEl) => {
-  let hours = new Date().getHours();
-  let hour = 6;
-  for (i = 6; i < 24; i++) {
-    hour++;
-    const progress = document.createElement(`div`);
-    progress.textContent = hour;
-    progress.style.color = `transparent`;
-    progress.setAttribute(`class`, `${hour}00 progress-hour col`);
-    progress.setAttribute(`id`, `${hour}-progress`);
-    if (hour < hours)
-      progress.style.backgroundColor = `#5fdc63`;
-    if (hour > hours)
-        progress.style.backgroundColor = `#a9dfef`;
-    if (hour === hours) progress.style.backgroundColor = `#febc76`;
-    parentEl.append(progress);
-  }
-};
-
-generateProgressLine(6, progressContainer);
-
 //SET TIME
 setInterval(() => { 
     function setDate() {
@@ -279,34 +240,54 @@ const setStartTime = (timingNow) => {
 };
 
 //EVENT LISTENERS
-//submitBtnNow.addEventListener(`click`, selectActivity);
-//submitBtnNext.addEventListener(`click`, selectActivity);
-//submitBtnThen.addEventListener(`click`, selectActivity);
 submitBtn.addEventListener(`click`, selectActivity);
+
+//TIMELINE HTML
+//GENERATE TIMELINE HOURS
+const generateTimeline = (i = 6, parentEl) => {
+    let hour = 6;
+    for (i = 6; i < 21; i++) {
+        hour++;
+        const time = document.createElement(`div`);
+        time.textContent = `${hour}:00`;
+        time.setAttribute(`class`, `${hour}00 timeline-hour col`);
+        time.setAttribute(`id`, `${hour}`);
+        parentEl.append(time);
+
+    };
+};
+
+//GENERATE TIMELINE PROGRESS COLOR CODE
+const generateProgressLine = (i = 6, parentEl) => {
+  let hours = new Date().getHours();
+  let currentHour = 6;
+  for (i = 6; i < 24; i++) {
+    currentHour++;
+    const progress = document.createElement(`div`);
+    progress.textContent = currentHour;
+    progress.style.color = `transparent`;
+    progress.setAttribute(`class`, `${currentHour}00 progress-hour col`);
+    progress.setAttribute(`id`, `${currentHour}-progress`);
+    if (currentHour < hours)
+      progress.style.backgroundColor = `#5fdc63`;
+    if (currentHour > hours)
+        progress.style.backgroundColor = `#a9dfef`;
+    if (currentHour === hours) progress.style.backgroundColor = `#febc76`;
+    parentEl.append(progress);
+  }
+};
 
 //INITIALIZATION FUNCTION
 function init() {
-    createDropdown(activityData, 0, dropdownContainerActivityNow);
-    createDropdown(activityData, 0, dropdownContainerActivityNext);
-    createDropdown(activityData, 0, dropdownContainerActivityThen);
+  createDropdown(activityData, 0, dropdownContainerActivityNow);
+  createDropdown(activityData, 0, dropdownContainerActivityNext);
+  createDropdown(activityData, 0, dropdownContainerActivityThen);
 };
 
 init();
 
-
-//TIMELINE HTML
-
-/*
-//SET PROGRESS IN TIMELINE
-const setTimelineColor = function(event) {
-    event.preventDefault();
-
-    //Get date & time
-        const today = new Date();
-        
-        //Convert date & time to string
-        const hours = today.getHours();
-        const minutes = today.getMinutes();
-
+function timelineInit() {
+    generateTimeline(6, timelineContainer);
 };
-*/
+
+timelineInit();
