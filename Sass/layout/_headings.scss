@@ -17,7 +17,9 @@
     }
 
     &__date {
-        margin: 0 2rem;
+        position: absolute;
+        top: 3%;
+        left: 3%;
         text-align: left;
         color: white;
         font-size: 0.75rem;
@@ -29,7 +31,8 @@
 }
 
 .subheader-1,
-.subheader-2 {
+.subheader-2,
+.subheader-3 {
     margin: 0;
     padding: 1rem 0 0.6rem 0;
     color: white;
@@ -42,4 +45,8 @@
 
 .subheader-2 {
     background: linear-gradient(to bottom right, $background-color-light, $background-color-dark);
+}
+
+.subheader-3 {
+    background: linear-gradient(to bottom right, rgb(106, 230, 217), rgb(77, 162, 162));
 }

@@ -1,0 +1,164 @@
+.timeline {
+ // background: linear-gradient(to bottom right, rgb(242, 246, 246), rgb(229, 245, 245));
+
+  &__morning {
+    padding: 0.5rem;
+    margin-top: 1rem;
+    font-size: 1.4rem;
+  }
+
+  &__afternoon {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+  }
+
+  &__time--morning,
+  &__time--afternoon {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__options {
+
+    &--eating,
+    &--hygiene,
+    &--sleep,
+    &--places,
+    &--chores,
+    &--play,
+    &--education {
+        padding: 1rem;
+        color: white;
+    }
+
+    &--eating {
+        background-color: rgb(182, 213, 182);
+    }
+
+    &--hygiene {
+        background-color: rgb(233, 233, 155);
+    }
+
+    &--sleep {
+        background-color: rgb(181, 235, 243);
+    }
+
+    &--places {
+        background-color: rgb(228, 176, 235);
+    }
+
+    &--chores {
+        background-color: rgb(251, 212, 150);
+    }
+
+    &--play {
+        background-color: rgb(251, 169, 150);
+    }
+
+    &--education {
+        background-color: rgb(150, 165, 251);
+    }
+  }
+}
+
+.chore,
+.eating,
+.sleep,
+.places,
+.play,
+.hygiene,
+.education {
+  margin: 0.5rem 0;
+  padding: 0.5rem 1rem;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 20px;
+}
+
+.chore {
+  background: linear-gradient(to bottom right, orange, orangered);
+}
+
+.hygiene {
+  background: linear-gradient(
+    to bottom right,
+    rgb(224, 221, 64),
+    rgb(171, 155, 49)
+  );
+}
+
+.eating {
+  background: linear-gradient(to bottom right, rgb(104, 199, 87), green);
+}
+
+.sleep {
+  background: linear-gradient(to bottom right, turquoise, teal);
+}
+
+.places {
+  background: linear-gradient(
+    to bottom right,
+    rgb(224, 64, 219),
+    rgb(140, 2, 142)
+  );
+}
+
+.play {
+  background: linear-gradient(
+    to bottom right,
+    rgb(224, 64, 75),
+    rgb(171, 49, 57)
+  );
+}
+
+.education {
+  background: linear-gradient(
+    to bottom right,
+    rgb(45, 36, 212),
+    rgb(41, 18, 155)
+  );
+}
+
+.icon {
+  font-size: 2rem;
+}
+
+.activitySlot {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: $text-color-trace;
+}
+
+.completionSlot {
+
+  padding-top: 0.25rem;
+  background-color: $text-color-trace;
+  color: white;
+  border-radius: 5px;
+  transition: 200ms all ease-in-out;
+
+}
+
+.highlight {
+
+  background-color: $accent-color--3-dark;
+  border-radius: 0 20px 0 0;
+  //box-shadow: 0 0 2rem $accent-color--3-dark;
+  color: white;
+
+}
+
+.completed {
+
+  background: url(/src/img/star.png);
+  background-size: cover;
+  background-position: center;
+  //background: linear-gradient(to bottom right, rgb(104, 199, 87), green);
+  border-radius: 5px;
+  //box-shadow: 0 0 2rem $accent-color--3-dark;
+  color: white;
+  
+}

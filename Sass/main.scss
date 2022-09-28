@@ -3,7 +3,9 @@
 
 @import "components/button";
 @import "components/choice-panel";
+@import "components/daily-routine";
 @import "components/instructions";
+@import "components/nav";
 @import "components/progress-line";
 @import "components/routine-input";
 @import "components/timeline-container";
@@ -15,3 +17,5 @@
 @import "layout/footer";
 @import "layout/header";
 @import "layout/headings";
+
+@import "vendors/bootstrap";

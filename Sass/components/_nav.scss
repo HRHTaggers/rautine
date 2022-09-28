@@ -1,0 +1,37 @@
+.nav {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    display: flex;
+    color: $text-color-trace;
+    font-size: 0.75rem;
+    text-align: right;
+
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        margin-left: 1rem;
+        display: inline;
+        transition: 200ms all ease-in-out;
+
+        &--link {
+            text-decoration: none;
+            color: $text-color-faint;
+
+            &:hover {
+                color: white;
+                background-color: none;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__item--link-active {
+        color: white;
+    }
+}
+
+
+
