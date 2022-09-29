@@ -1,0 +1,45 @@
+.modal-window {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: $background-color-modal;
+  backdrop-filter: blur(5px);
+  z-index: 9999;
+  transition: 200ms all ease-in-out;
+
+  &__content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 70vw;
+    padding: 2rem 1rem;
+    background-color: white;
+    border-radius: 5px;
+  }
+
+  &__step {
+      font-weight: 600;
+      font-size: 3rem;
+      color: $background-color-dark;
+  }
+
+  &__heading {
+      margin-bottom: 1rem;
+      font-weight: 600;
+      font-size: 1.6rem;
+      color: $background-color-dark;
+  }
+
+  &__paragraph {
+      font-size: 1.2rem;
+  }
+}
+
+.hidden {
+  opacity: 0;
+  visibility: none;
+  z-index: -100;
+}

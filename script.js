@@ -12,6 +12,10 @@ const dropdownContainersAll = document.querySelectorAll(`.routine-input__form--d
 const timelineDropdownActivity = document.querySelector(`.timeline__dropdown-activity`);
 const headerDate = document.querySelector(`.header__date`);
 
+//Modal Window
+const modalWindowIndex = document.getElementById(`modal-window-index`);
+const modalButtonIndex = document.getElementById(`modal-window-btn-index`);
+
 //Transition Panel
 const activityIconNow = document.querySelector(`.transition-panel__icon--now`);
 const activityDescNow = document.querySelector(`.transition-panel__description--now`);
@@ -111,6 +115,15 @@ const transitionData = [
         capital: `Then`
     }
 ];
+
+//MODAL WINDOW REVEAL - INDEX
+const closeIndexModal = function() {
+  modalButtonIndex.addEventListener(`click`, function () {
+      modalWindowIndex.classList.add(`hidden`);
+    });
+};
+
+closeIndexModal();
 
 //SET TIME
 setInterval(() => { 

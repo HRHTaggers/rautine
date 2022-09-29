@@ -48,26 +48,15 @@
             </li>
         </ul>
     </nav>
-
-    <div class="instructions">
-        <div class="subheader-1">
-            How to create a visual routine
-        </div>
-        <p class="instructions__paragraph">Drag and drop the activities of your choice into each activity space. 
-        </p>
-        <p>Multiple activities can be placed in the same hour slot.</p>
-        </p>
-        <p>Once an activity has been completed, press the question mark to uncover a gold star!</p>
-        </p>
-    </div>
-    <div class="subheader-3">
-            What is happening today?
+    
+    <div class="subheader-1">
+            <span id="weekday-markup"></span> - what is happening today?
         </div>
 
 <main class="timeline row">
     <div class="timeline__morning">
         <div class="timeline__time--morning row">
-            <div class="col timeline__heading--morning"><strong>Morning</strong></div>
+            <div class="col timeline__heading--morning"><strong>morning</strong></div>
             <!--<div class="col"><strong>Time</strong></div>-->
             <div class="col timeslot">7:00</div>
             <div class="col timeslot">8:00</div>
@@ -116,7 +105,7 @@
     </div>
     <div class="timeline__afternoon">
         <div class="timeline__time--afternoon row">
-            <div class="col timeline__heading--afternoon"><strong>Afternoon</strong></div>
+            <div class="col timeline__heading--afternoon"><strong>afternoon</strong></div>
             <!--<div class="col"><strong>Time</strong></div>-->
             <div class="col timeslot">14:00</div>
             <div class="col timeslot">15:00</div>
@@ -253,6 +242,38 @@
                 </div>
 </main>
 
+<div class="modal-window" id="modal-window-routine">
+    <div class="modal-window__content">
+        <div class="modal-window__heading">
+            How to create a daily routine board
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="row">
+                    <div class="modal-window__step">1</div>
+                    <div class="modal-window__paragraph">drag and drop the activities of your choice into the space below each timeslot
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <div class="modal-window__step">2</div>
+                    <div class="modal-window__paragraph">multiple activities can be placed in the same timeslot
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <div class="modal-window__step">3</div>
+                    <div class="modal-window__paragraph">once the scheduled activities have been completed for the timeslot, press the question mark underneath to uncover a gold star!
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="modal-window__btn btn" id="modal-window-btn-routine">let's start!</button>
+    </div>
+</div>
+
 <footer class="footer">
         <div class="row">
             <div class="col-sm-8">
@@ -279,7 +300,7 @@
                     <img src="/src/img/helen-tagliarini-logo-back-light.png" alt="HT Coding logo" class="brand-logo">
                 </div>
                 <div class="footer__attribution--location">
-                    London, United Kingdom
+                    london, united kingdom
                 </div>
             </div>
         </div>

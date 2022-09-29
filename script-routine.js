@@ -13,8 +13,21 @@ const headerDate2 = document.querySelector(`.header__date2`);
 const timeslots = document.querySelectorAll(`.timeslot`);
 const activitySlots = document.querySelectorAll(`.activitySlot`);
 const completionSlots = document.querySelectorAll(`.completionSlot`);
+const weekdayMarkup = document.getElementById(`weekday-markup`);
+
+const modalWindowRoutine = document.getElementById(`modal-window-routine`);
+const modalButtonRoutine = document.getElementById(`modal-window-btn-routine`);
 
 const starAudio = new Audio(`src/star-audio.wav`);
+
+//MODAL WINDOW REVEAL - ROUTINE
+const closeRoutineModal = function() {
+  modalButtonRoutine.addEventListener(`click`, () => {
+    modalWindowRoutine.classList.add(`hidden`);
+  });
+};
+
+closeRoutineModal();
 
 //TIME INDICATOR
 const indicateHour = function() {
@@ -137,6 +150,8 @@ setInterval(() => {
     headerDate2.innerHTML = `${weekday}, ${date} ${month} ${year}, ${
       hours < 12 ? `0` : ``
     }${hours}:${minutes < 10 ? `0` : ``}${minutes}`;
+
+    weekdayMarkup.innerHTML = `today is ${weekday}`;
   }
   setDate();
 }, 1000);
