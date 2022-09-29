@@ -250,7 +250,7 @@
 
 .highlight {
   background-color: #fc8303;
-  border-radius: 0 20px 0 0;
+  border-radius: 20px 20px 5px 5px;
   color: white;
 }
 
