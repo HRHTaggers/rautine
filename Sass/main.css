@@ -140,6 +140,10 @@
   font-size: 1.4rem;
 }
 
+.timeline__heading--icon {
+  font-size: 3rem;
+}
+
 .timeline__time--morning, .timeline__time--afternoon {
   margin: 0;
   padding: 0;
