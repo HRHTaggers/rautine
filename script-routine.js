@@ -14,6 +14,8 @@ const timeslots = document.querySelectorAll(`.timeslot`);
 const activitySlots = document.querySelectorAll(`.activitySlot`);
 const completionSlots = document.querySelectorAll(`.completionSlot`);
 
+const starAudio = new Audio(`src/star-audio.wav`);
+
 //TIME INDICATOR
 const indicateHour = function() {
 
@@ -38,6 +40,7 @@ const indicateCompleted = function() {
     completionSlot.addEventListener("click", () => {
       completionSlot.innerHTML = ``;
       completionSlot.classList.toggle(`completed`);
+      starAudio.play();
     });
   });
 

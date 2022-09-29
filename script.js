@@ -245,7 +245,7 @@ const selectActivity = function(event) {
 };
 
 //SET START TIME FOR NEXT ACTIVITY BASED ON PREVIOUS INPUT
-const setStartTime = (timingNow) => {
+const setStartTimeNext = (timingNow) => {
   timingNext.value = timingNow.value;
 };
 
