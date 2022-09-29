@@ -45,76 +45,95 @@ const formInput = document.querySelector(`.routine-input__form`);
 //DATA OBJECTS
 const activityData = [
   {
-    name: "Snack",
-    category: "Eat",
-    icon: `<i class="fa-solid fa-apple-whole"></i>`,
+    name: "breakfast",
+    category: "eat",
+    icon: `🥣`,
   },
   {
-    name: "Lunch",
-    category: "Eat",
-    icon: `<i class="fa-solid fa-utensils"></i>`,
+    name: "snack",
+    category: "eat",
+    icon: `🍎`,
   },
   {
-    name: "Tea",
-    category: "Eat",
-    icon: `<i class="fa-solid fa-utensils"></i>`,
+    name: "lunch",
+    category: "eat",
+    icon: `🍽️`,
   },
   {
-    name: "Nap",
-    category: "Sleep",
-    icon: `<i class="fa-solid fa-bed"></i>`,
+    name: "tea",
+    category: "eat",
+    icon: `🍽️`,
   },
   {
-    name: "Bedtime",
-    category: "Sleep",
-    icon: `<i class="fa-solid fa-bed"></i>`,
+    name: "nap",
+    category: "sleep",
+    icon: `🛏️`,
   },
   {
-    name: "Music",
-    category: "Play",
-    icon: `<i class="fa-solid fa-music"></i>`,
+    name: "bedtime",
+    category: "sleep",
+    icon: `🛏️`,
   },
   {
-    name: "Playgroup",
-    category: "Play",
-    icon: `<i class="fa-solid fa-school"></i>`,
+    name: "free-play",
+    category: "play",
+    icon: `🧸`,
   },
   {
-    name: "Outdoor",
-    category: "Play",
-    icon: `<i class="fa-solid fa-tree"></i>`,
+    name: "playdate",
+    category: "play",
+    icon: `👭`,
   },
   {
-    name: "Phonics",
-    category: "Learning",
-    icon: `<i class="fa-brands fa-readme"></i>`,
+    name: "music",
+    category: "play",
+    icon: `🎵`,
   },
   {
-    name: "Shopping",
-    category: "Learning",
-    icon: `<i class="fa-solid fa-basket-shopping"></i>`,
+    name: "home",
+    category: "location",
+    icon: `🏡`,
   },
   {
-    name: "Car",
-    category: "Travel",
-    icon: `<i class="fa-solid fa-car-side"></i>`,
+    name: "nursery",
+    category: "location",
+    icon: `🏫`,
+  },
+  {
+    name: "playgroup",
+    category: "location",
+    icon: `🏫`,
+  },
+  {
+    name: "outdoors",
+    category: "play",
+    icon: `🌳`,
+  },
+  {
+    name: "grandma's",
+    category: "location",
+    icon: `👩🏻`,
+  },
+  {
+    name: "shopping",
+    category: "chore",
+    icon: `🛒`,
+  },
+  {
+    name: "car",
+    category: "travel",
+    icon: `🚗`,
+  },
+  {
+    name: "bus",
+    category: "travel",
+    icon: `🚌`,
   },
 ];
 
-const transitionData = [
-    {
-        name: `now`,
-        capital: `Now`
-    },
-    { 
-        name: `next`,
-        capital: `Next`
-    }, 
-    {
-        name: `then`,
-        capital: `Then`
-    }
-];
+const fiveMinuteWarningAudio = new Audio(`src/5-min-warning.wav`);
+const timeUpWarningAudio = new Audio(`src/time-up-warning-mp3.mp3`);
+timeUpWarningAudio.loop = false;
 
 //MODAL WINDOW REVEAL - INDEX
 const closeIndexModal = function() {
@@ -245,13 +264,20 @@ const selectActivity = function(event) {
 
       //Calculate remaining time & update DOM - Now, Next, Then
       const timeRemaining = totalMinutesEnd - totalMinutesNow;
-      timeRemainingNow.innerHTML = `Time left: ${timeRemaining} minutes`;
+      timeRemainingNow.innerHTML = `time left: ${timeRemaining} minutes`;
+      if(timeRemaining === 5) {
+        fiveMinuteWarningAudio.play();
+      };
+      if(timeRemaining === 0.00) {
+        timeUpWarningAudio.loop = false;
+        timeUpWarningAudio.play();
+      };
 
       const startTimeNext = dropdownContainerTimingNext.value;
-      timeRemainingNext.innerHTML = `Starts at: ${startTimeNext}`;
+      timeRemainingNext.innerHTML = `starts at: ${startTimeNext}`;
 
       const startTimeThen = dropdownContainerTimingThen.value;
-      timeRemainingThen.innerHTML = `Starts at: ${startTimeThen}`;
+      timeRemainingThen.innerHTML = `starts at: ${startTimeThen}`;
     }
     setFinishTime();
   }, 1000);
