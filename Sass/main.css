@@ -241,6 +241,9 @@
   border-width: 1px;
   border-radius: 5px;
   border-color: #bdbdbd;
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(10%, #bdbdbd), color-stop(10%, white), color-stop(92%, white), color-stop(92%, #ececec));
+  background: linear-gradient(to bottom right, #bdbdbd 10%, white 10%, white 92%, #ececec 92%);
+  min-height: 5rem;
 }
 
 .completionSlot {
@@ -303,12 +306,13 @@
           transform: translate(-50%, -50%);
   min-width: 70vw;
   padding: 2rem 1rem;
-  background-color: white;
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(10%, #ececec), color-stop(10%, white), color-stop(90%, white), color-stop(90%, #ececec));
+  background: linear-gradient(to bottom right, #ececec 10%, white 10%, white 90%, #ececec 90%);
   border-radius: 5px;
 }
 
 .modal-window__step {
-  font-weight: 600;
+  font-weight: 800;
   font-size: 3rem;
   color: #0390bb;
 }
@@ -340,6 +344,13 @@
   color: #bdbdbd;
   font-size: 0.75rem;
   text-align: right;
+}
+
+@media screen and (max-width: 75em) {
+  .nav {
+    top: 2%;
+    right: 2%;
+  }
 }
 
 .nav__list {
@@ -434,6 +445,7 @@
   margin: 0;
   text-align: center;
   color: white;
+  background-color: transparent;
 }
 
 .transition-panel figure {
@@ -468,6 +480,11 @@
   padding: 1rem 0 0.5rem 0;
   font-size: 2rem;
   font-weight: 600;
+}
+
+.transition-panel__now, .transition-panel__next, .transition-panel__then {
+  -webkit-clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+          clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
 }
 
 .transition-panel__now {
@@ -539,6 +556,12 @@ body {
 
 .brand-logo {
   max-height: 4rem;
+}
+
+.highlight-text {
+  color: #0390bb;
+  font-weight: 600;
+  font-size: 1.4rem;
 }
 
 .footer {
@@ -630,6 +653,13 @@ body {
 @media screen and (max-width: 37.5em) {
   .header__date {
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 75em) {
+  .header__date {
+    top: 2%;
+    left: 2%;
   }
 }
 

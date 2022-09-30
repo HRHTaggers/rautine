@@ -134,6 +134,8 @@
   border-width: 1px;
   border-radius: 5px;
   border-color: $text-color-trace;
+  background: linear-gradient(to bottom right, $text-color-trace 10%, white 10%, white 92%, $text-color-faint 92%);
+  min-height: 5rem;
 }
 
 .completionSlot {

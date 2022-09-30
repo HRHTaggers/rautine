@@ -2,6 +2,7 @@
     margin: 0;
     text-align: center;
     color: white;
+    background-color: transparent;
 
     & figure {
         display: inline-block;
@@ -41,6 +42,12 @@
         padding: 1rem 0 0.5rem 0;
         font-size: 2rem;
         font-weight: 600;
+    }
+
+    &__now,
+    &__next,
+    &__then {
+        clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
     }
 
     &__now {

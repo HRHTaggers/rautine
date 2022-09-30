@@ -16,12 +16,12 @@
     transform: translate(-50%, -50%);
     min-width: 70vw;
     padding: 2rem 1rem;
-    background-color: white;
+    background: linear-gradient(to bottom right, $text-color-faint 10%, white 10%, white 90%, $text-color-faint 90%);
     border-radius: 5px;
   }
 
   &__step {
-      font-weight: 600;
+      font-weight: 800;
       font-size: 3rem;
       color: $background-color-dark;
   }

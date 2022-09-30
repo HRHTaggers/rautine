@@ -27,6 +27,11 @@
         @include respond(phone) {
             text-align: center;
         }
+
+        @include respond(tab-land) {
+            top: 2%;
+            left: 2%;
+        }
     }
 }
 

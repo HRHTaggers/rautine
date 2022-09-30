@@ -105,6 +105,11 @@ const activityData = [
     icon: `🏫`,
   },
   {
+    name: "church",
+    category: "location",
+    icon: `⛪`,
+  },
+  {
     name: "outdoors",
     category: "play",
     icon: `🌳`,
