@@ -1,15 +1,47 @@
 .modal-window {
+  
+  &__instructions,
+  &__stars {
   position: fixed;
   height: 100vh;
   width: 100%;
   top: 0;
   left: 0;
-  background-color: $background-color-modal;
   backdrop-filter: blur(5px);
-  z-index: 9999;
   transition: 200ms all ease-in-out;
+  }
 
-  &__content {
+  &__instructions {
+    background-color: $background-color-modal--1;
+    z-index: 500;
+  }
+
+  &__stars {
+    background: $background-color-modal--2;
+    z-index: 600;
+  }
+
+  &__stars-message {
+
+    &--primary {
+      font-size: 1.4rem;
+      color: $accent-color--3-dark;
+      font-weight: 800;
+    }
+
+    &--secondary {
+      font-size: 1.2rem;
+      padding-top: 1rem;
+    }
+
+    
+  }
+
+}
+
+.modal-window {
+
+  &__container {
     position: fixed;
     top: 50%;
     left: 50%;

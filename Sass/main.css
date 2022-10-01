@@ -284,21 +284,40 @@
   }
 }
 
-.modal-window {
+.modal-window__instructions, .modal-window__stars {
   position: fixed;
   height: 100vh;
   width: 100%;
   top: 0;
   left: 0;
-  background-color: #0390bb88;
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
-  z-index: 9999;
   -webkit-transition: 200ms all ease-in-out;
   transition: 200ms all ease-in-out;
 }
 
-.modal-window__content {
+.modal-window__instructions {
+  background-color: #0390bb88;
+  z-index: 500;
+}
+
+.modal-window__stars {
+  background: #fe962788;
+  z-index: 600;
+}
+
+.modal-window__stars-message--primary {
+  font-size: 1.4rem;
+  color: #fc8303;
+  font-weight: 800;
+}
+
+.modal-window__stars-message--secondary {
+  font-size: 1.2rem;
+  padding-top: 1rem;
+}
+
+.modal-window__container {
   position: fixed;
   top: 50%;
   left: 50%;

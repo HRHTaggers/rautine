@@ -17,10 +17,16 @@ const weekdayMarkup = document.getElementById(`weekday-markup`);
 
 const modalWindowRoutine = document.getElementById(`modal-window-routine`);
 const modalButtonRoutine = document.getElementById(`modal-window-btn-routine`);
+const modalWindowRecognition = document.getElementById(`modal-window-stars`);
+const modalContentRecognition = document.getElementById(`modal-window-stars-content`);
+const modalButtonRecognition = document.getElementById(
+  `modal-window-btn-stars`
+);
+const openRecognitionModal = document.getElementById(`open-stars-modal`);
 
 const starAudio = new Audio(`src/star-audio.wav`);
 
-//MODAL WINDOW REVEAL - ROUTINE
+//MODAL WINDOW CLOSE - ROUTINE
 const closeRoutineModal = function() {
   modalButtonRoutine.addEventListener(`click`, () => {
     modalWindowRoutine.classList.add(`hidden`);
@@ -28,6 +34,46 @@ const closeRoutineModal = function() {
 };
 
 closeRoutineModal();
+
+//MODAL WINDOW OPEN - RECOGNITION
+const openStarModal = function() {
+  openRecognitionModal.addEventListener(`click`, () => {
+    modalWindowRecognition.classList.remove(`hidden`);
+
+    i = 1;
+    completionSlots.forEach((completionSlot) => {
+      if(completionSlot.textContent === ``) {
+        i++;
+      };
+      const markup = `
+          <div class="modal-window__heading">
+              🌟 well done! 🌟
+          </div>
+          <div class="modal-window__stars-message--primary">
+              you've unlocked ${i} stars today! that's enough for a galaxy!
+          </div>
+          <div class="modal-window__stars-message--secondary">
+              you've done so well today - let's see how many you can get tomorrow
+          </div>
+          <div class="modal-window__stars-message--secondary">
+              sleep well, little star
+          </div>
+      `;
+      modalContentRecognition.innerHTML = markup;
+    });
+
+    modalButtonRecognition.addEventListener(`click`, function () {
+      modalWindowRecognition.classList.add(`hidden`);
+    });
+  });
+};
+
+openStarModal();
+
+//MODAL WINDOW CLOSE - RECOGNITION
+modalButtonRecognition.addEventListener(`click`, function() {
+    modalWindowRecognition.classList.add(`hidden`);
+});
 
 //TIME INDICATOR
 const indicateHour = function() {
