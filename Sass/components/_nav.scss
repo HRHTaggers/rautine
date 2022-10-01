@@ -7,11 +7,6 @@
     font-size: 0.75rem;
     text-align: right;
 
-    @include respond(tab-land) {
-        top: 2%;
-        right: 2%;
-    }
-
     &__list {
         list-style: none;
     }

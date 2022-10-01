@@ -44,12 +44,6 @@
         font-weight: 600;
     }
 
-    &__now,
-    &__next,
-    &__then {
-        clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
-    }
-
     &__now {
         background: linear-gradient(to bottom right, $accent-color--4-light, $accent-color--4-dark);
     }

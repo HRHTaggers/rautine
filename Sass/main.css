@@ -346,13 +346,6 @@
   text-align: right;
 }
 
-@media screen and (max-width: 75em) {
-  .nav {
-    top: 2%;
-    right: 2%;
-  }
-}
-
 .nav__list {
   list-style: none;
 }
@@ -480,11 +473,6 @@
   padding: 1rem 0 0.5rem 0;
   font-size: 2rem;
   font-weight: 600;
-}
-
-.transition-panel__now, .transition-panel__next, .transition-panel__then {
-  -webkit-clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
-          clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
 }
 
 .transition-panel__now {
@@ -618,17 +606,28 @@ body {
 }
 
 .header {
+  position: relative;
   margin: 0;
   padding: 2rem 0;
-  background: -webkit-gradient(linear, left top, right bottom, from(#a9dfef), to(#0390bb));
-  background: linear-gradient(to bottom right, #a9dfef, #0390bb);
+  background: linear-gradient(120deg, #a9dfef, #0390bb);
+  /*animation: animateBg 10s linear infinite;
+    background-image: linear-gradient(120deg, $background-color-dark, $background-color, $text-color-faint);
+    background-size: 100% 1100%;
+
+    }
+
+    @keyframes animateBg {
+        0% {background-position: 0% 0%;}
+        100% {background-position: 0% 100%;}
+    }
+    */
 }
 
 .header__logo {
   max-height: 20vh;
 }
 
-@media screen and (max-width: 75em) {
+@media screen and (max-width: 56.25em) {
   .header__logo {
     max-height: 15vh;
   }
@@ -643,7 +642,7 @@ body {
 
 .header__date {
   position: absolute;
-  top: 3%;
+  top: 15%;
   left: 3%;
   text-align: left;
   color: white;
@@ -653,13 +652,6 @@ body {
 @media screen and (max-width: 37.5em) {
   .header__date {
     text-align: center;
-  }
-}
-
-@media screen and (max-width: 75em) {
-  .header__date {
-    top: 2%;
-    left: 2%;
   }
 }
 
@@ -673,8 +665,8 @@ body {
 }
 
 .subheader-1 {
-  background: -webkit-gradient(linear, left top, right bottom, from(#febc76), to(#fc8303));
-  background: linear-gradient(to bottom right, #febc76, #fc8303);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fe9627), color-stop(80%, #fc8303));
+  background: linear-gradient(to bottom, #fe9627, #fc8303 80%);
 }
 
 .subheader-2 {
