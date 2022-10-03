@@ -44,7 +44,7 @@ const openStarModal = function() {
 
     i = 1;
     completionSlots.forEach((completionSlot) => {
-      if(completionSlot.textContent === ``) {
+      if(completionSlot.textContent === `*`) {
         i++;
       };
       const markup = `
