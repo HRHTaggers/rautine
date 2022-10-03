@@ -113,11 +113,10 @@
             <div class="col timeslot">17:00</div>
             <div class="col timeslot">18:00</div>
             <div class="col timeslot">19:00</div>
-            <div class="col timeslot">20:00</div>
+            <div class="col timeslot">Bedtime</div>
         </div>
         <div class="row">
             <h3 class="col timeline__heading--icon">🌙</h3>
-            <!--<div class="col"><strong>Activity</strong></div>-->
             <div class="col activitySlot drag-col" data-id="8" ondrop="drop(event)" ondragover="allowDrop(event)">
                 </div>
             <div class="col activitySlot drag-col" data-id="9" ondrop="drop(event)" ondragover="allowDrop(event)">
@@ -130,7 +129,7 @@
                 </div>
             <div class="col activitySlot drag-col" data-id="13" ondrop="drop(event)" ondragover="allowDrop(event)">
                 </div>
-            <div class="col activitySlot drag-col" data-id="14" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="col completionSlot" id="open-stars-modal">?
                 </div>
         </div>
         <div class="row">
@@ -147,8 +146,8 @@
                 ?</div>
             <div class="col completionSlot">
                 ?</div>
-            <div class="col completionSlot" id="open-stars-modal">
-                ?</div>
+            <div class="col">
+                </div>
         </div>
     </div>
     <div class="timeline__options">
@@ -271,7 +270,9 @@
                     </div>
                 </div>
             </div>
-            <button class="modal-window__btn btn" id="modal-window-btn-routine">let's start!</button>
+            <button class="modal-window__btn btn" id="modal-window-btn-routine">
+                let's start!
+            </button>
         </div>
     </div>
 </div>
@@ -281,10 +282,23 @@
         <div class="modal-window__content" id="modal-window-stars-content">
         </div>
         <button class="modal-window__btn btn" id="modal-window-btn-stars">
-            goodnight
+            <a href="/nightscreen.html" class="modal-window__btn--link">
+                goodnight
+            </a>
         </button>
     </div>
 </div>
+
+<!--
+<div class="modal-window__night hidden" id="modal-window-night">
+    <div>nightscreen</div>
+    <video autoplay loop muted class="modal-window__night--video">
+        <source src="/src/stars-video.mp4" type="video/MP4">
+    </video>
+    <a href="/routine.html" class="btn">
+        start a new day
+    </a>
+</div>-->
 
 <footer class="footer">
         <div class="row">
@@ -313,6 +327,13 @@
                 </div>
                 <div class="footer__attribution--location">
                     london, united kingdom
+                </div>
+                <div class="footer__attribution--music">
+                    music provided by
+                    child dreams by keys of moon | https://soundcloud.com/keysofmoon
+                    music promoted by https://www.chosic.com/free-music/all/
+                    creative commons cc by 4.0
+                    https://creativecommons.org/licenses/by/4.0/
                 </div>
             </div>
         </div>

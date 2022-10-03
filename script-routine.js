@@ -23,8 +23,10 @@ const modalButtonRecognition = document.getElementById(
   `modal-window-btn-stars`
 );
 const openRecognitionModal = document.getElementById(`open-stars-modal`);
+const modalWindowNight = document.querySelector(`.modal-window-night`);
 
 const starAudio = new Audio(`src/star-audio.wav`);
+const lullabyAudio = new Audio (`src/lullaby.mp3`);
 
 //MODAL WINDOW CLOSE - ROUTINE
 const closeRoutineModal = function() {
@@ -50,7 +52,7 @@ const openStarModal = function() {
               🌟 well done! 🌟
           </div>
           <div class="modal-window__stars-message--primary">
-              you've unlocked ${i} stars today! that's enough for a galaxy!
+              you've unlocked ${i} stars today! that's enough for a constellation!
           </div>
           <div class="modal-window__stars-message--secondary">
               you've done so well today - let's see how many you can get tomorrow
@@ -60,6 +62,7 @@ const openStarModal = function() {
           </div>
       `;
       modalContentRecognition.innerHTML = markup;
+      lullabyAudio.play();
     });
 
     modalButtonRecognition.addEventListener(`click`, function () {
@@ -72,7 +75,12 @@ openStarModal();
 
 //MODAL WINDOW CLOSE - RECOGNITION
 modalButtonRecognition.addEventListener(`click`, function() {
+  //Close recognition modal
     modalWindowRecognition.classList.add(`hidden`);
+
+  //Open nightscreen modal
+  //  modalWindowNight.classList.remove(`hidden`);
+  //  lullabyAudio.play();
 });
 
 //TIME INDICATOR
@@ -97,7 +105,8 @@ const indicateCompleted = function() {
 
   completionSlots.forEach(function(completionSlot) {
     completionSlot.addEventListener("click", () => {
-      completionSlot.innerHTML = ``;
+      completionSlot.innerHTML = `*`;
+      completionSlot.style.color = `transparent`;
       completionSlot.classList.toggle(`completed`);
       starAudio.play();
     });
