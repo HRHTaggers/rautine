@@ -67,6 +67,10 @@
 }
 
 .btn-night {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  z-index: 1200;
   background-color: white;
   -webkit-transition: 200ms all ease-in-out;
   transition: 200ms all ease-in-out;
