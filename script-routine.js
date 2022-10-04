@@ -23,7 +23,7 @@ const modalButtonRecognition = document.getElementById(
   `modal-window-btn-stars`
 );
 const openRecognitionModal = document.getElementById(`open-stars-modal`);
-const modalWindowNight = document.querySelector(`.modal-window-night`);
+const modalNightscreen = document.getElementById(`modal-nightscreen`);
 
 const starAudio = new Audio(`src/star-audio.wav`);
 const lullabyAudio = new Audio (`src/lullaby.mp3`);
@@ -52,13 +52,13 @@ const openStarModal = function() {
               🌟 well done! 🌟
           </div>
           <div class="modal-window__stars-message--primary">
-              you've unlocked ${i} stars today! that's enough for a constellation!
+              you've unlocked ${i} stars today! that's a constellation!
           </div>
           <div class="modal-window__stars-message--secondary">
-              you've done so well today - let's see how many you can get tomorrow
+              you've done so well - let's see how many stars you can get tomorrow
           </div>
           <div class="modal-window__stars-message--secondary">
-              sleep well, little star
+              sleep well, little one
           </div>
       `;
       modalContentRecognition.innerHTML = markup;
@@ -67,21 +67,13 @@ const openStarModal = function() {
 
     modalButtonRecognition.addEventListener(`click`, function () {
       modalWindowRecognition.classList.add(`hidden`);
+      modalNightscreen.classList.remove(`hidden`);
     });
   });
 };
 
 openStarModal();
 
-//MODAL WINDOW CLOSE - RECOGNITION
-modalButtonRecognition.addEventListener(`click`, function() {
-  //Close recognition modal
-    modalWindowRecognition.classList.add(`hidden`);
-
-  //Open nightscreen modal
-  //  modalWindowNight.classList.remove(`hidden`);
-  //  lullabyAudio.play();
-});
 
 //TIME INDICATOR
 const indicateHour = function() {

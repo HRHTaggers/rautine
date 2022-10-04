@@ -288,9 +288,14 @@ const selectActivity = function(event) {
   }, 1000);
 };
 
-//SET START TIME FOR NEXT ACTIVITY BASED ON PREVIOUS INPUT
+//SET START TIME FOR NEXT ACTIVITY BASED ON NOW INPUT
 const setStartTimeNext = (timingNow) => {
   timingNext.value = timingNow.value;
+};
+
+//SET START TIME FOR THEN ACTIVITY BASED ON NEXT INPUT
+const setStartTimeThen = (timingNext) => {
+  timingThen.value = timingNext.value;
 };
 
 //EVENT LISTENERS

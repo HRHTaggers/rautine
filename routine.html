@@ -46,6 +46,11 @@
                     daily routine
                 </a>
             </li>
+            <li class="nav__item">
+                <a href="/nightscreen.html" class="nav__item--link nav__item--link-active">
+                    nightscreen
+                </a>
+            </li>
         </ul>
     </nav>
     
@@ -251,21 +256,21 @@
                 <div class="col">
                     <div class="row">
                         <div class="modal-window__step">1</div>
-                        <div class="modal-window__paragraph">drag and drop the activities of your choice into the space below each timeslot
+                        <div class="modal-window__paragraph"><span class="highlight-text">drag and drop</span> the activities of your choice into the space below <span class="highlight-text">each timeslot</span>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="row">
                         <div class="modal-window__step">2</div>
-                        <div class="modal-window__paragraph">multiple activities can be placed in the same timeslot
+                        <div class="modal-window__paragraph"><span class="highlight-text">multiple activities</span> can be placed in the same timeslot
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="row">
                         <div class="modal-window__step">3</div>
-                        <div class="modal-window__paragraph">once the scheduled activities have been completed for the timeslot, press the question mark underneath to uncover a gold star!
+                        <div class="modal-window__paragraph">once the scheduled activities have been completed for the timeslot, press the <span class="highlight-text">question mark</span> underneath to uncover a <span class="highlight-text">gold star!</span>
                         </div>
                     </div>
                 </div>
@@ -282,35 +287,28 @@
         <div class="modal-window__content" id="modal-window-stars-content">
         </div>
         <button class="modal-window__btn btn" id="modal-window-btn-stars">
-            <!--<a href="/nightscreen.html" class="modal-window__btn--link">-->
-                goodnight
-            <!--</a>-->
+            goodnight
         </button>
     </div>
 </div>
 
-<!--
-<div class="modal-window__night hidden" id="modal-window-night">
-    <div>nightscreen</div>
-    <video autoplay loop muted class="modal-window__night--video">
-        <source src="/src/stars-video.mp4" type="video/MP4">
-    </video>
-    <a href="/routine.html" class="btn">
-        start a new day
-    </a>
-</div>-->
+<div class="modal-window__nightscreen hidden" id="modal-nightscreen">
+    <div class="modal-window__container-night">
+        <video loop autoplay src="/src/stars-video.mp4" class="w-100 rounded"></video>
+        <div class="modal-window__btn btn-night">
+            <a href="/routine.html" class="modal-window__btn--link btn-night__link">
+                return to routine
+            </a>
+        </div>
+    </div>
+    <div class="modal-window__nightscreen--overlay">
+    </div>
+</div>
 
 <footer class="footer">
         <div class="row">
             <div class="col-sm-8">
                 <div class="footer__app-info">
-                    <!--<div class="app-name__logo">
-                        rAutine<span>©</span>
-                    </div>
-                    <div class="app-name__tagline">
-                        the transitions app
-                    </div>
-                -->
                     <img src="/src/img/rAutine-logo-white.png" alt="rAutine logo" class="footer__logo">
                     <p class="footer__app-description">
                         an application to provide a visual routine for children who struggle with transitions in their daily routine.
@@ -328,6 +326,7 @@
                 <div class="footer__attribution--location">
                     london, united kingdom
                 </div>
+                <br />
                 <div class="footer__attribution--music">
                     music provided by
                     child dreams by keys of moon | https://soundcloud.com/keysofmoon

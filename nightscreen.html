@@ -22,15 +22,20 @@
 
   </head>
 
-  <body>
+  <body class="window-nightscreen">
+    <header class="header-night">
+         <img src="/src/img/rAutine-logo-white.png" alt="rAutine logo" class="header__logo" />
+    </header>
     <div class="stars-video">
-        <video src="/src/stars-video.mp4" class="stars-video__video" autoplay="on" onload="playStarsAudio()"></video>
+        <video src="/src/stars-video.mp4" class="stars-video__video w-100" autoplay loop></video>
     </div>
-    <button class="nightscreen__return">
-        <a href="/routine.html" class="return__routine">
-            return to routine
-        </a>
-    </button>
+    <div class="footer-night">
+        <button class="nightscreen__return btn-night">
+            <a href="/routine.html" class="return__routine btn-night__link">
+                return to routine
+            </a>
+        </button>
+    </div>
   </body>
 
 <script src="script-routine.js"></script>

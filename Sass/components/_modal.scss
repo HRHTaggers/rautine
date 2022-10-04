@@ -1,7 +1,8 @@
 .modal-window {
   
   &__instructions,
-  &__stars {
+  &__stars,
+  &__nightscreen {
   position: fixed;
   height: 100vh;
   width: 100%;
@@ -35,15 +36,39 @@
     }
   }
 
-  &__container {
+  &__nightscreen {
+    background: radial-gradient(transparent, black), url(/src/img/nightscreen-background.png);
+    //background-color: #1e1e25;
+    //background: linear-gradient(120deg, rgb(42, 33, 61), rgb(16, 13, 24));
+    background-size: cover;
+    z-index: 800;
+  }
+
+  &__container,
+  &__container-night,
+  &__nightscreen--overlay {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    min-width: 70vw;
     padding: 2rem 1rem;
-    background: linear-gradient(to bottom right, $text-color-faint 10%, white 10%, white 90%, $text-color-faint 90%);
     border-radius: 5px;
+  }
+
+  &__container {
+    background: linear-gradient(to bottom right, $text-color-faint 10%, white 10%, white 90%, $text-color-faint 90%); 
+    min-width: 70vw;
+  }
+
+  &__container-night {
+    min-width: 90vw;
+  }
+
+  &__nightscreen--overlay {
+    background: radial-gradient(transparent, black 60%);
+    min-height: 100vh;
+    min-width: 100vw;
+    z-index: 1000;
   }
 
   &__step {
