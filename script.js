@@ -301,6 +301,7 @@ const setStartTimeThen = (timingNext) => {
 //EVENT LISTENERS
 submitBtn.addEventListener(`click`, selectActivity);
 
+/*
 //TIMELINE HTML
 //GENERATE TIMELINE HOURS
 const generateTimeline = (i = 6, parentEl) => {
@@ -335,6 +336,7 @@ const generateProgressLine = (i = 6, parentEl) => {
     parentEl.append(progress);
   }
 };
+*/
 
 //INITIALIZATION FUNCTION
 function init() {
@@ -344,9 +346,3 @@ function init() {
 };
 
 init();
-
-function timelineInit() {
-    generateTimeline(6, timelineContainer);
-};
-
-timelineInit();

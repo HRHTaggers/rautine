@@ -1,0 +1,68 @@
+.tools {
+
+    &__panel {
+
+        &--1,
+        &--2,
+        &--3 {
+        padding: 3rem 2rem 2rem 2rem;
+        vertical-align: middle;
+        
+        }
+
+        &--1 {
+            background: linear-gradient(120deg, $accent-color--4-light, $accent-color--4);
+
+            &:hover {
+                background: linear-gradient(120deg, $accent-color--4, $accent-color--4-dark);
+                cursor: pointer;
+            }
+        }
+
+        &--2 {
+            background: linear-gradient(120deg, $accent-color--5-light, $accent-color--5);
+
+            &:hover {
+                background: linear-gradient(120deg, $accent-color--5, $accent-color--5-dark);
+            }
+        }
+
+        &--3 {
+            background: linear-gradient(to bottom right, $accent-color--2-light, $accent-color--2);
+        
+            &:hover {
+                background: linear-gradient(120deg, $accent-color--2, $accent-color--2-dark);
+            }
+        }
+
+        &--icon {
+            display: inline;
+            padding: 1rem 0.5rem 0.5rem 0.5rem;
+            border-radius: 120px;
+            background-color: white;
+            font-size: 3rem;
+        }
+
+        &--link {
+            text-decoration: none;
+            color: white;
+            transition: 200ms all ease-in-out;
+
+            &::before,
+            &::after,
+            &:visited {
+                color: white;
+            }
+        }
+
+        &--heading {
+            padding: 1rem 0;
+            font-size: 1.7rem;
+            font-weight: 600;
+        }
+
+        &--caption {
+            font-size: 1.1rem
+        }
+    }
+}
