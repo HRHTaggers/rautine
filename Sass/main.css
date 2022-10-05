@@ -319,6 +319,11 @@
   transition: 200ms all ease-in-out;
 }
 
+.completionSlot:hover {
+  cursor: pointer;
+  background-color: #757575;
+}
+
 .highlight {
   background-color: #fc8303;
   border-radius: 20px 20px 5px 5px;
@@ -687,6 +692,10 @@ body {
 .footer__attribution {
   margin: auto;
   font-size: 0.75rem;
+}
+
+.footer__attribution--music {
+  font-size: 0.5rem;
 }
 
 .footer-night {
