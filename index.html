@@ -21,16 +21,32 @@
 
   </head>
   <body>
+    <!--
+    <div class="timeline-link">
+        <a href="/timeline.html" class="timeline-link">    
+            timeline
+        </a>
+        </div>
+    -->
 
     <div class="header">
+        <!--<div class="app-name">
+            <div class="app-name__logo">
+                rAutine<span class="copyright-sign">©</span>
+            </div>
+            <div class="app-name__tagline">
+                the transitions app
+            </div>
+        </div>
+    -->
         <div class="header__date">Date</div>
         <img src="/src/img/rAutine-logo-white.png" alt="rAutine logo" class="header__logo" />
     </div>
 
     <nav class="nav">
         <ul class="nav__list">
-            <li class="nav__item nav__item nav__item">
-                <a href="/about.html" class="nav__item--link">
+            <li class="nav__item">
+                <a href="/index.html" class="nav__item--link nav__item--link-active">
                     home
                 </a>
             </li>
@@ -39,8 +55,8 @@
                     flashcard
                 </a>
             </li>
-            <li class="nav__item nav__item nav__item">
-                <a href="/index.html" class="nav__item--link nav__item--link-active">
+            <li class="nav__item">
+                <a href="/nnt.html" class="nav__item--link">
                     now|next|then
                 </a>
             </li>
@@ -52,124 +68,70 @@
         </ul>
     </nav>
 
-    <h2 class="subheader-1">
-        input your activities
-    </h2>
-
-    <div class="routine-input">
-        <form class="routine-input__form row">
-            <div class="col-sm-4">
-                <label class="routine-input__form--label">now</label>
-                <select name="dropdown" class="routine-input__form--dropdown-container routine-input__form--dropdown-container-activity-now">
-
-                </select>
-                <input type="time" class="routine-input__form--timing routine-input__form--timing-now" onchange="setStartTimeNext(this)" />
-                <!--<button class="routine-input__form--btn-now btn">
-                    Add to routine
-                </button>-->
+    <main class="main">
+        <section class="introduction u-margin-bottom-small">
+            <h2 class="introduction__subheader subheader-1">
+                welcome to rAutine
+            </h2>
+            <div class="introduction__paragraph u-margin-top-small">
+                <span class="highlight-text">transitions</span> can be difficult for children to understand and make them feel <span class="highlight-text">anxious</span>, <span class="highlight-text">concerned</span> and <span class="highlight-text">distressed</span>
+                <div class="row">
+                    <!--<div class="col-sm highlight-text">anxious</div>
+                    <div class="col-sm">concerned</div>
+                    <div class="col-sm">distressed</div>-->
+                </div>
             </div>
-            <div class="col-sm-4">
-                <label class="routine-input__form--label">next</label>
-                <select name="dropdown" class="routine-input__form--dropdown-container routine-input__form--dropdown-container-activity-next">
-
-                </select>
-                <input type="time" class="routine-input__form--timing routine-input__form--timing-next" onchange="setStartTimeThen(this)" />
-                <!--<button class="routine-input__form--btn-next btn">
-                    Add to routine
-                </button>-->   
+            <div class="introduction__paragraph">this app aims to provide <span class="highlight-text">simple visual tools</span> to help reduce these feelings and help your child deal with these changes by making them <span class="highlight-text">clear</span>, <span class="highlight-text">understandable</span> and <span class="highlight-text">foreseeable</span>
             </div>
-            <div class="col-sm-4">            
-                <label class="routine-input__form--label">then</label>
-                <select name="dropdown" class="routine-input__form--dropdown-container routine-input__form--dropdown-container-activity-then">
+            <div class="introduction__paragraph">no need for carrying physical boards/flashcards/timers
+            <div class="highlight-text--large">just one app that you can carry anywhere at any time</div>
+        </section>
 
-                </select>
-                <input type="time" class="routine-input__form--timing routine-input__form--timing-then" />
-            </div>
-            <div class="routine-input__update">
-                <button class="routine-input__form--btn btn">
-                    Update routine
-                </button>
-            </div>       
-        </form>
-    </div>
-
-    <!--
-    <div class="choice-panel">
+    <section class="tools">
+        <h2 class="tools__subheader subheader-2">
+            explore
+        </h2>
         <div class="row">
-            <div class="col-sm-2 choice-panel__option-block choice-panel__option-block--food">
-                Snack
+            <div class="tools__panel--1 col-sm">
+                <a href="index.html" class="tools__panel--link">
+                    <div class="tools__panel--icon">⚡</div>
+                    <div class="tools__panel--heading">
+                        flashcards
+                    </div>
+                    <div class="tools__panel--caption">
+                        show visual of a selected activity/location
+                    </div>
+                </a>
             </div>
-            <div class="col-sm-2 choice-panel__option-block choice-panel__option-block--sleep">
-                Naptime
+            <div class="tools__panel--2 col-sm">
+                <a href="index.html" class="tools__panel--link">
+                    <div class="tools__panel--icon">⌛</div>
+                    <div class="tools__panel--heading">
+                        now | next | then
+                    </div>
+                    <div class="tools__panel--caption">
+                        signal upcoming transitions in the present moment
+                    </div>
+                </a>
             </div>
-            <div class="col-sm-2 choice-panel__option-block choice-panel__option-block--play">
-                Park
-            </div>
-            <div class="col-sm-2 choice-panel__option-block choice-panel__option-block--travel">
-                Car
-            </div>
-            <div class="col-sm-2 choice-panel__option-block choice-panel__option-block--food">
-                Lunch
-            </div>
-            <div class="col-sm-2 choice-panel__option-block choice-panel__option-block--sleep">
-                Bedtime
+            <div class="tools__panel--3 col-sm">
+                <a href="routine.html" class="tools__panel--link">
+                    <div class="tools__panel--icon">⭐</div>
+                    <div class="tools__panel--heading">
+                        daily routine
+                    </div>
+                    <div class="tools__panel--caption">
+                        visualize the upcoming day in hourly slots & reward activity completion
+                    </div>
+                </a>
             </div>
         </div>
-    </div>
-    -->
+    </section>
 
-    <h2 class="subheader-2">
-        what's happening...?
-    </h2>
-    <div class="row transition-panel">
-        <div class="col-sm-4 transition-panel__now u-margin-bottom-small">
-            <div class="transition-panel__title">
-            now
-            </div>
-            <figure class="transition-panel__icon--now">
-                <i class="fa-solid fa-question"></i>
-            </figure>
-            <figcaption class="transition-panel__description--now">
-                *****
-            </figcaption>
-            <figcaption class="transition-panel__time--now">
-                time left:
-                <span>** minutes</span>
-            </figcaption>
-        </div>
-        <div class="col-sm-4 transition-panel__next u-margin-bottom-small">
-            <div class="transition-panel__title">
-            next
-            </div>
-            <figure class="transition-panel__icon--next">
-                <i class="fa-solid fa-question"></i>
-            </figure>
-            <figcaption class="transition-panel__description--next">
-                *****
-            </figcaption>
-            <figcaption class="transition-panel__time--next">
-                start time:
-                <span>**:**</span>
-            </figcaption>
-        </div>
-        <div class="col-sm-4 transition-panel__then u-margin-bottom-small">
-            <div class="transition-panel__title">
-            then
-            </div>
-            <figure class="transition-panel__icon--then">
-                <i class="fa-solid fa-question"></i>
-            </figure>
-            <figcaption class="transition-panel__description--then">
-                *****
-            </figcaption>
-            <figcaption class="transition-panel__time--then">
-                start time:
-                <span>**:**</span>
-            </figcaption>
-        </div>
-    </div>
+    </main>
 
-    <div class="modal-window__instructions" id="modal-window-index">
+
+    <div class="modal-window__cookies hidden" id="modal-window-cookies">
     <div class="modal-window__container">
         <div class="modal-window__content">
             <div class="modal-window__heading">
@@ -183,23 +145,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="row">
-                        <div class="modal-window__step">2</div>
-                        <div class="modal-window__paragraph">enter the <span class="highlight-text">finish time</span> for the <span class="highlight-text">now</span> panel
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="row">
-                        <div class="modal-window__step">3</div>
-                        <div class="modal-window__paragraph">enter the <span class="highlight-text">start time</span> for the <span class="highlight-text">then</span> panels
-                        </div>
-                    </div>
-                </div>
             </div>
             <button class="modal-window__btn btn" id="modal-window-btn-index">
-                let's start!
+                agree
             </button>
         </div>
     </div>
