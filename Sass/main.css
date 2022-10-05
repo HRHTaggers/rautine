@@ -593,7 +593,7 @@
   transition: 200ms all ease-in-out;
 }
 
-.tools__panel--link::before, .tools__panel--link::after, .tools__panel--link:visited {
+.tools__panel--link:hover, .tools__panel--link::before, .tools__panel--link::after, .tools__panel--link:visited {
   color: white;
 }
 

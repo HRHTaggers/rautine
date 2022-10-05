@@ -48,6 +48,7 @@
             color: white;
             transition: 200ms all ease-in-out;
 
+            &:hover,
             &::before,
             &::after,
             &:visited {
