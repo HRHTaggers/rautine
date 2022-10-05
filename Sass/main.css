@@ -776,6 +776,16 @@ body {
   font-size: 0.75rem;
 }
 
+.footer__attribution--logo {
+  -webkit-transition: 200ms all ease-in-out;
+  transition: 200ms all ease-in-out;
+}
+
+.footer__attribution--logo:hover {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
 .footer__attribution--music {
   font-size: 0.5rem;
 }

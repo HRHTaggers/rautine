@@ -18,6 +18,14 @@
     &__attribution {
         margin: auto;
         font-size: 0.75rem;
+
+        &--logo {
+            transition: 200ms all ease-in-out;
+
+            &:hover {
+                transform: rotateY(180deg);
+            }
+        }
     }
 
     &__attribution--music {
