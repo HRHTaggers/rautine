@@ -1,4 +1,4 @@
-.transition-panel {
+.display-panel {
     margin: 0;
     text-align: center;
     color: white;
@@ -54,5 +54,30 @@
 
     &__then {
         background: linear-gradient(to bottom right, $accent-color--2-light, $accent-color--2-dark);
+    }
+
+    &__flashcard {
+        margin: 2rem 1rem;
+        padding: 4rem 0;
+
+        &--1 {
+            background: linear-gradient(to bottom right, $accent-color--2-light, $accent-color--2-dark);
+        }
+
+        &--2 {
+            background: linear-gradient(to bottom right, $accent-color--4-light, $accent-color--4-dark);
+        }
+
+        &--3 {
+            background: linear-gradient(to bottom right, $accent-color--5-light, $accent-color--5-dark);
+        }
+
+        &--4 {
+            background: linear-gradient(to bottom right, $accent-color--1-light, $accent-color--1-dark);
+        }
+
+        &--5 {
+            background: linear-gradient(to bottom right, $accent-color--2-light, $accent-color--2-dark);
+        }
     }
 }

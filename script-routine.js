@@ -1,19 +1,111 @@
-/*const timeCheck = function () {
-  const hours = new Date().getHours();
-  const timeslot = document.querySelector(`.`)
-  console.log(hours);
-  if(hours === 22) 
-};
+`use strict`;
 
-timeCheck();
-*/
+//DATA OBJECTS
+const activityData = [
+  {
+    name: "breakfast",
+    category: "eat",
+    icon: `🥣`,
+  },
+  {
+    name: "snack",
+    category: "eat",
+    icon: `🍎`,
+  },
+  {
+    name: "lunch",
+    category: "eat",
+    icon: `🍽️`,
+  },
+  {
+    name: "tea",
+    category: "eat",
+    icon: `🍽️`,
+  },
+  {
+    name: "nap",
+    category: "sleep",
+    icon: `🛏️`,
+  },
+  {
+    name: "bedtime",
+    category: "sleep",
+    icon: `🛏️`,
+  },
+  {
+    name: "free-play",
+    category: "play",
+    icon: `🧸`,
+  },
+  {
+    name: "playdate",
+    category: "play",
+    icon: `👭`,
+  },
+  {
+    name: "music",
+    category: "play",
+    icon: `🎵`,
+  },
+  {
+    name: "home",
+    category: "location",
+    icon: `🏡`,
+  },
+  {
+    name: "nursery",
+    category: "location",
+    icon: `🏫`,
+  },
+  {
+    name: "playgroup",
+    category: "location",
+    icon: `🏫`,
+  },
+  {
+    name: "church",
+    category: "location",
+    icon: `⛪`,
+  },
+  {
+    name: "outdoors",
+    category: "play",
+    icon: `🌳`,
+  },
+  {
+    name: "grandma's",
+    category: "location",
+    icon: `👩🏻`,
+  },
+  {
+    name: "shopping",
+    category: "chore",
+    icon: `🛒`,
+  },
+  {
+    name: "car",
+    category: "travel",
+    icon: `🚗`,
+  },
+  {
+    name: "bus",
+    category: "travel",
+    icon: `🚌`,
+  },
+];
 
 //DOM REFERENCES
-const headerDate2 = document.querySelector(`.header__date2`);
+const headerDateRoutine = document.querySelector(`.header__date--routine`);
+const headerDateFlash = document.querySelector(`.header__date--flashcard`);
+
 const timeslots = document.querySelectorAll(`.timeslot`);
 const activitySlots = document.querySelectorAll(`.activitySlot`);
 const completionSlots = document.querySelectorAll(`.completionSlot`);
 const weekdayMarkup = document.getElementById(`weekday-markup`);
+
+const flashcardDropdown = document.getElementById(`flashcard-dropdown`);
+const displayPanel = document.getElementById(`display-panel-body`);
+const displayFlashcardBtn = document.getElementById(`display-flashcard-btn`);
 
 const modalWindowRoutine = document.getElementById(`modal-window-routine`);
 const modalButtonRoutine = document.getElementById(`modal-window-btn-routine`);
@@ -73,7 +165,6 @@ const openStarModal = function() {
 };
 
 openStarModal();
-
 
 //TIME INDICATOR
 const indicateHour = function() {
@@ -194,7 +285,7 @@ setInterval(() => {
     const year = today.getFullYear();
 
     //Insert date & time to DOM
-    headerDate2.innerHTML = `${weekday}, ${date} ${month} ${year}, ${
+    headerDateRoutine.innerHTML = `${weekday}, ${date} ${month} ${year}, ${
       hours < 12 ? `0` : ``
     }${hours}:${minutes < 10 ? `0` : ``}${minutes}`;
 

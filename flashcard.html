@@ -24,7 +24,7 @@
   <body>
 
     <div class="header">
-        <div class="header__date">Date</div>
+        <div class="header__date header__date--flashcard">Date</div>
         <img src="/src/img/rAutine-logo-white.png" alt="rAutine logo" class="header__logo" />
     </div>
 
@@ -54,15 +54,25 @@
     </nav>
 
     <h2 class="subheader-1">
-        select an activity for the flashcard image
+        select an activity for the flashcard images
     </h2>
 
-    <div class="under-construction">
-        <div>🚧</div>
-        <div>
-            Currently under construction
-        </div>
-    </div>
+    <main class="flashcard">
+        <section class="selection">
+            <label class="input__form--label">select the flashcard activity</label>
+                <select name="dropdown" class="input__form--dropdown-container" id="flashcard-dropdown">
+
+                </select>
+            <button class="btn" id="display-flashcard-btn" onclick="setVisual()">display flashcard</button>
+            <button class="btn-clear" id="clear-flashcard-btn" onclick="clearVisuals()">clear display</button>
+        </section>
+        <section class="display-panel">
+            <div class="display-panel__container">
+                <div class="row display-panel__body" id="display-panel-body">
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer class="footer">
         <div class="row">
@@ -76,7 +86,7 @@
             </div>
             <div class="col-sm-4 footer__attribution">
                 <div class="footer__attribution--design">
-                    designed by helen tagliarini for the purposes of educational support - please do not copy or use for the purposes of commerce.
+                    designed by helen tagliarini for the purposes of educational support | please do not copy or use for the purposes of commerce.
                 </div>
                 <br />
                 <div class="footer__attribution--logo">
@@ -99,6 +109,5 @@
         </div>
     </footer>
   </body>
-  <script src="https://kit.fontawesome.com/90f11e2679.js" crossorigin="anonymous"></script>
-  <script src="script.js"></script>
+  <script src="script-flashcard.js"></script>
 </html>

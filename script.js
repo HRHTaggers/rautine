@@ -17,19 +17,19 @@ const modalWindowIndex = document.getElementById(`modal-window-index`);
 const modalButtonIndex = document.getElementById(`modal-window-btn-index`);
 
 //Transition Panel
-const activityIconNow = document.querySelector(`.transition-panel__icon--now`);
-const activityDescNow = document.querySelector(`.transition-panel__description--now`);
-const timeRemainingNow = document.querySelector(`.transition-panel__time--now`);
+const activityIconNow = document.querySelector(`.display-panel__icon--now`);
+const activityDescNow = document.querySelector(`.display-panel__description--now`);
+const timeRemainingNow = document.querySelector(`.display-panel__time--now`);
 const timingNow = document.querySelector(`.routine-input__form--timing-now`);
 
-const activityIconNext = document.querySelector(`.transition-panel__icon--next`);
-const activityDescNext = document.querySelector(`.transition-panel__description--next`);
-const timeRemainingNext = document.querySelector(`.transition-panel__time--next`);
+const activityIconNext = document.querySelector(`.display-panel__icon--next`);
+const activityDescNext = document.querySelector(`.display-panel__description--next`);
+const timeRemainingNext = document.querySelector(`.display-panel__time--next`);
 const timingNext = document.querySelector(`.routine-input__form--timing-next`);
 
-const activityIconThen = document.querySelector(`.transition-panel__icon--then`);
-const activityDescThen = document.querySelector(`.transition-panel__description--then`);
-const timeRemainingThen = document.querySelector(`.transition-panel__time--then`);
+const activityIconThen = document.querySelector(`.display-panel__icon--then`);
+const activityDescThen = document.querySelector(`.display-panel__description--then`);
+const timeRemainingThen = document.querySelector(`.display-panel__time--then`);
 const timingThen = document.querySelector(`.routine-input__form--timing-then`);
 
 //Timeline
@@ -204,34 +204,6 @@ const createDropdown = function (array, i = 0, parentEl) {
     parentEl.appendChild(option);
   }
 };
-
-
-//GENERATE FORMS FOR EACH TRANSITION
-/*const generateForm = function (array, i = 0, parentEl) {
-
-    for (i = 0; i < array.length; i++) {
-      let form = document.createElement(`form`);
-      form.innerHTML = `
-            <div class="col-sm-4">
-                <label class="routine-input__form--label">${array[i].name}</label>
-                <select name="dropdown" class="routine-input__form--dropdown-container routine-input__form--dropdown-container-activity-${array[i].name}">
-                    <option>Snack</option>
-                    <option>Lunch</option>
-                    <option>Nap</option>
-                    <option>Outdoor Play</option>
-                    <option>Music</option>
-                </select>
-                <input type="time" class="routine-input__form--timing routine-input__form--timing-now" />
-                <!--<button class="routine-input__form--btn-${array[i].name} btn">
-                    Add to routine
-                </button>-->
-            </div>
-        `;
-        parentEl.appendChild(form);
-    };
-
-};
-*/
 
 //SET ACTIVITY & TIMING IN PANEL FROM DROPDOWNS
 const selectActivity = function(event) {

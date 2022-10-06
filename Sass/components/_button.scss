@@ -1,5 +1,6 @@
 .btn,
-.btn-night {
+.btn-night,
+.btn-clear {
     display: inline-block;
     margin: 1rem;
     padding: 0.25rem 0.75rem;
@@ -42,7 +43,21 @@
 
     &::after,
     &::selection {
-        background: linear-gradient(to bottom right, $accent-color--2-light, $accent-color--2);
+        background: linear-gradient(to bottom right, $accent-color--2, $accent-color--2-dark);
+    }
+}
+
+.btn-clear {
+    background: linear-gradient(to bottom right, $text-color-trace, $text-color-secondary);
+
+    &:hover {
+        color: white;
+        background: linear-gradient(to bottom right, $text-color-secondary, $text-color-primary);
+    }
+
+    &::after,
+    &::selection {
+        background: linear-gradient(to bottom right, $text-color-trace, $text-color-secondary);
     }
 }
 

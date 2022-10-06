@@ -57,37 +57,37 @@
         input your activities
     </h2>
 
-    <div class="routine-input">
-        <form class="routine-input__form row">
+    <div class="routine-input input">
+        <form class="input__form row">
             <div class="col-sm-4">
-                <label class="routine-input__form--label">now</label>
-                <select name="dropdown" class="routine-input__form--dropdown-container routine-input__form--dropdown-container-activity-now">
+                <label class="input__form--label">now</label>
+                <select name="dropdown" class="input__form--dropdown-container routine-input__form--dropdown-container-activity-now">
 
                 </select>
-                <input type="time" class="routine-input__form--timing routine-input__form--timing-now" onchange="setStartTimeNext(this)" />
+                <input type="time" class="input__form--timing routine-input__form--timing-now" onchange="setStartTimeNext(this)" />
                 <!--<button class="routine-input__form--btn-now btn">
                     Add to routine
                 </button>-->
             </div>
             <div class="col-sm-4">
-                <label class="routine-input__form--label">next</label>
-                <select name="dropdown" class="routine-input__form--dropdown-container routine-input__form--dropdown-container-activity-next">
+                <label class="input__form--label">next</label>
+                <select name="dropdown" class="input__form--dropdown-container routine-input__form--dropdown-container-activity-next">
 
                 </select>
-                <input type="time" class="routine-input__form--timing routine-input__form--timing-next" onchange="setStartTimeThen(this)" />
+                <input type="time" class="input__form--timing routine-input__form--timing-next" onchange="setStartTimeThen(this)" />
                 <!--<button class="routine-input__form--btn-next btn">
                     Add to routine
                 </button>-->   
             </div>
             <div class="col-sm-4">            
-                <label class="routine-input__form--label">then</label>
-                <select name="dropdown" class="routine-input__form--dropdown-container routine-input__form--dropdown-container-activity-then">
+                <label class="input__form--label">then</label>
+                <select name="dropdown" class="input__form--dropdown-container routine-input__form--dropdown-container-activity-then">
 
                 </select>
-                <input type="time" class="routine-input__form--timing routine-input__form--timing-then" />
+                <input type="time" class="input__form--timing routine-input__form--timing-then" />
             </div>
             <div class="routine-input__update">
-                <button class="routine-input__form--btn btn">
+                <button class="input__form--btn routine-input__form--btn btn">
                     Update routine
                 </button>
             </div>       
@@ -122,48 +122,48 @@
     <h2 class="subheader-2">
         what's happening...?
     </h2>
-    <div class="row transition-panel">
-        <div class="col-sm-4 transition-panel__now u-margin-bottom-small">
-            <div class="transition-panel__title">
+    <div class="row display-panel">
+        <div class="col-sm-4 display-panel__now u-margin-bottom-small">
+            <div class="display-panel__title">
             now
             </div>
-            <figure class="transition-panel__icon--now">
+            <figure class="display-panel__icon--now">
                 <i class="fa-solid fa-question"></i>
             </figure>
-            <figcaption class="transition-panel__description--now">
+            <figcaption class="display-panel__description--now">
                 *****
             </figcaption>
-            <figcaption class="transition-panel__time--now">
+            <figcaption class="display-panel__time--now">
                 time left:
                 <span>** minutes</span>
             </figcaption>
         </div>
-        <div class="col-sm-4 transition-panel__next u-margin-bottom-small">
-            <div class="transition-panel__title">
+        <div class="col-sm-4 display-panel__next u-margin-bottom-small">
+            <div class="display-panel__title">
             next
             </div>
-            <figure class="transition-panel__icon--next">
+            <figure class="display-panel__icon--next">
                 <i class="fa-solid fa-question"></i>
             </figure>
-            <figcaption class="transition-panel__description--next">
+            <figcaption class="display-panel__description--next">
                 *****
             </figcaption>
-            <figcaption class="transition-panel__time--next">
+            <figcaption class="display-panel__time--next">
                 start time:
                 <span>**:**</span>
             </figcaption>
         </div>
-        <div class="col-sm-4 transition-panel__then u-margin-bottom-small">
-            <div class="transition-panel__title">
+        <div class="col-sm-4 display-panel__then u-margin-bottom-small">
+            <div class="display-panel__title">
             then
             </div>
-            <figure class="transition-panel__icon--then">
+            <figure class="display-panel__icon--then">
                 <i class="fa-solid fa-question"></i>
             </figure>
-            <figcaption class="transition-panel__description--then">
+            <figcaption class="display-panel__description--then">
                 *****
             </figcaption>
-            <figcaption class="transition-panel__time--then">
+            <figcaption class="display-panel__time--then">
                 start time:
                 <span>**:**</span>
             </figcaption>
