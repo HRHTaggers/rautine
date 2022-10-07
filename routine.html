@@ -59,286 +59,255 @@
             <span id="weekday-markup"></span> - what is happening today?
         </div>
 
-<main class="timeline row">
-    <div class="timeline__morning">
-        <div class="timeline__time--morning row">
-            <div class="col timeline__heading--morning"><strong>morning</strong></div>
-            <!--<div class="col"><strong>Time</strong></div>-->
-            <div class="col timeslot">7:00</div>
-            <div class="col timeslot">8:00</div>
-            <div class="col timeslot">9:00</div>
-            <div class="col timeslot">10:00</div>
-            <div class="col timeslot">11:00</div>
-            <div class="col timeslot">12:00</div>
-            <div class="col timeslot">13:00</div>
-        </div>
-        <div class="row">
-            <h3 class="col timeline__heading--icon">☀️</h3>
-            <!--<div class="col"><strong>Activity</strong></div>-->
-            <div class="col  activitySlot drag-col" data-id="1" ondrop="drop(event)" ondragover="allowDrop(event)">
-                </div>
-            <div class="col  activitySlot drag-col" data-id="2" ondrop="drop(event)" ondragover="allowDrop(event)">
-                </div>
-            <div class="col  activitySlot drag-col" data-id="3" ondrop="drop(event)" ondragover="allowDrop(event)">
-                </div>
-            <div class="col  activitySlot drag-col" data-id="4" ondrop="drop(event)" ondragover="allowDrop(event)">
-                </div>
-            <div class="col  activitySlot drag-col" data-id="5" ondrop="drop(event)" ondragover="allowDrop(event)">
-                </div>
-            <div class="col  activitySlot drag-col" data-id="6" ondrop="drop(event)" ondragover="allowDrop(event)">
-                </div>
-            <div class="col  activitySlot drag-col" data-id="7" ondrop="drop(event)" ondragover="allowDrop(event)">
-                </div>
-        </div>
-        <div class="row">
-            <h3 class="col timeline__heading--morning"></h3>
-            <!--<div class="col"><strong>Done?</strong></div>-->
-            <div class="col completionSlot">
-                ?</div>
-            <div class="col completionSlot">
-                ?</div>
-            <div class="col completionSlot">
-                ?</div>
-            <div class="col completionSlot">
-                ?</div>
-            <div class="col completionSlot">
-                ?</div>
-            <div class="col completionSlot">
-                ?</div>
-            <div class="col completionSlot">
-                ?</div>
-        </div>
-    </div>
-    <div class="timeline__afternoon">
-        <div class="timeline__time--afternoon row">
-            <div class="col timeline__heading--afternoon"><strong>afternoon</strong></div>
-            <!--<div class="col"><strong>Time</strong></div>-->
-            <div class="col timeslot">14:00</div>
-            <div class="col timeslot">15:00</div>
-            <div class="col timeslot">16:00</div>
-            <div class="col timeslot">17:00</div>
-            <div class="col timeslot">18:00</div>
-            <div class="col timeslot">19:00</div>
-            <div class="col timeslot">Bedtime</div>
-        </div>
-        <div class="row">
-            <h3 class="col timeline__heading--icon">🌙</h3>
-            <div class="col activitySlot drag-col" data-id="8" ondrop="drop(event)" ondragover="allowDrop(event)">
-                </div>
-            <div class="col activitySlot drag-col" data-id="9" ondrop="drop(event)" ondragover="allowDrop(event)">
-                </div>
-            <div class="col activitySlot drag-col" data-id="10" ondrop="drop(event)" ondragover="allowDrop(event)">
-                </div>
-            <div class="col activitySlot drag-col" data-id="11" ondrop="drop(event)" ondragover="allowDrop(event)">
-                </div>
-            <div class="col activitySlot drag-col" data-id="12" ondrop="drop(event)" ondragover="allowDrop(event)">
-                </div>
-            <div class="col activitySlot drag-col" data-id="13" ondrop="drop(event)" ondragover="allowDrop(event)">
-                </div>
-            <div class="col completionSlot" id="open-stars-modal">Tap here at bedtime
-                </div>
-        </div>
-        <div class="row">
-            <h3 class="col timeline__heading--morning"></h3>
-            <div class="col completionSlot">
-                ?</div>
-            <div class="col completionSlot">
-                ?</div>
-            <div class="col completionSlot">
-                ?</div>
-            <div class="col completionSlot">
-                ?</div>
-            <div class="col completionSlot">
-                ?</div>
-            <div class="col completionSlot">
-                ?</div>
-            <div class="col">
-                </div>
-        </div>
-    </div>
-    <div class="timeline__options">
-        <div class="row">
-                <div class="col timeline__options--eating">
-                    <h3>Eating</h3>
-                    <div class=" eating drag-col" draggable="true" ondragstart="drag(event)" data-id="16">
-                        Breakfast <span class="icon">🥣</span></div>
-                    <div class=" eating drag-col" draggable="true" ondragstart="drag(event)" data-id="17">
-                        Snack <span class="icon">🍎</span></div>
-                    <div class=" eating drag-col" draggable="true" ondragstart="drag(event)" data-id="18">
-                        Lunch <span class="icon">🍽️</span></div>
-                    <div class=" eating drag-col" draggable="true" ondragstart="drag(event)" data-id="19">
-                        Dinner <span class="icon">🍽️</span></div>
-                    <div class=" eating drag-col" draggable="true" ondragstart="drag(event)" data-id="16a">
-                        <span class="icon">🥣</span></div>
-                </div>
-                <div class="col timeline__options--hygiene">
-                    <h3>Hygiene</h3>
-                    <div class=" hygiene" draggable="true" ondragstart="drag(event)" data-id="20a">
-                        Waking up <span class="icon">🌅</span></div>
-                    <div class=" hygiene" draggable="true" ondragstart="drag(event)" data-id="20">
-                        Getting dressed <span class="icon">👕</span></div>
-                    <div class=" hygiene" draggable="true" ondragstart="drag(event)" data-id="21">
-                        Brushing teeth <span class="icon">🪥</span></div>
-                    <div class=" hygiene" draggable="true" ondragstart="drag(event)" data-id="22">
-                        Brushing hair <span class="icon">🪥</span></div>
-                    <div class=" hygiene" draggable="true" ondragstart="drag(event)" data-id="23">
-                        Washing hands <span class="icon">👐</span></div>
-                    <div class=" hygiene" draggable="true" ondragstart="drag(event)" data-id="24">
-                        Toilet <span class="icon">🚽</span></div>
-                </div>
-                <div class="col timeline__options--sleep">
-                    <h3>Sleep</h3>
-                    <div class=" sleep" draggable="true" ondragstart="drag(event)" data-id="25">
-                        Naptime <span class="icon">🛏️</span></div>
-                    <div class=" sleep" draggable="true" ondragstart="drag(event)" data-id="26">
-                        Bedtime <span class="icon">🛏️</span></div>
-                </div>
-                <div class="col timeline__options--places">
-                    <h3>Places</h3>
-                    <div class=" places" draggable="true" ondragstart="drag(event)" data-id="27">
-                        Home <span class="icon">🏡</span></div>
-                    <div class=" places" draggable="true" ondragstart="drag(event)" data-id="28">
-                        Nursery <span class="icon">🏫</span></div>
-                    <div class=" places" draggable="true" ondragstart="drag(event)" data-id="29">
-                        School <span class="icon">🏫</span></div>
-                    <div class=" places" draggable="true" ondragstart="drag(event)" data-id="30">
-                        Playgroup <span class="icon">🏫</span></div>
-                </div>
-                <div class="col timeline__options--chores">
-                    <h3>Chores</h3>
-                    <div class=" chore" draggable="true" ondragstart="drag(event)" data-id="31">
-                        Shopping <span class="icon">🛒</span></div>
-                    <div class=" chore" draggable="true" ondragstart="drag(event)" data-id="32">
-                        Tidying <span class="icon">🗑️</span></div>
-                    <div class=" chore" draggable="true" ondragstart="drag(event)" data-id="33">
-                        Gardening <span class="icon">🌻</span></div>
-                    <div class=" chore" draggable="true" ondragstart="drag(event)" data-id="34">
-                        Cooking <span class="icon">🥄</span></div>
-                    <div class=" chore" draggable="true" ondragstart="drag(event)" data-id="35">
-                        Setting the table <span class="icon">🍴</span></div>
-                </div>
-                <div class="col timeline__options--play">
-                    <h3>Play</h3>
-                    <div class=" play" draggable="true" ondragstart="drag(event)" data-id="36">
-                        Park <span class="icon">🏞️</span></div>
-                    <div class=" play" draggable="true" ondragstart="drag(event)" data-id="37">
-                        Garden Play <span class="icon">🌳</span></div>
-                    <div class=" play" draggable="true" ondragstart="drag(event)" data-id="38">
-                        Arts <span class="icon">🎨</span></div>
-                    <div class=" play" draggable="true" ondragstart="drag(event)" data-id="39">
-                        Music <span class="icon">🎵</span></div>
-                    <div class=" play" draggable="true" ondragstart="drag(event)" data-id="40">
-                        Messy Play <span class="icon">💦</span></div>
-                    <div class=" play" draggable="true" ondragstart="drag(event)" data-id="41">
-                        Free Play <span class="icon">❔</span></div>
-                </div>
-                <div class="col timeline__options--education">
-                    <h3>Education</h3>
-                    <div class=" education" draggable="true" ondragstart="drag(event)" data-id="42">
-                        Reading <span class="icon">📖</span></div>
-                    <div class=" education" draggable="true" ondragstart="drag(event)" data-id="43">
-                        Phonics <span class="icon">🗣️</span></div>
-                    <div class=" education" draggable="true" ondragstart="drag(event)" data-id="44">
-                        Maths <span class="icon">🔢</span></div>
-                    <div class=" education" draggable="true" ondragstart="drag(event)" data-id="45">
-                        Science <span class="icon">🔭</span></div>
-                    <div class=" education" draggable="true" ondragstart="drag(event)" data-id="46">
-                        Roleplay <span class="icon">💭</span></div>
-                </div>
-</main>
-
-<div class="modal-window__instructions" id="modal-window-routine">
-    <div class="modal-window__container">
-        <div class="modal-window__content">
-            <div class="modal-window__heading">
-                How to create a daily routine board
+    <main class="timeline row">
+        <div class="timeline__morning">
+            <div class="timeline__time--morning row">
+                <div class="col timeline__heading--morning"><strong>morning</strong></div>
+                <!--<div class="col"><strong>Time</strong></div>-->
+                <div class="col timeslot">7:00</div>
+                <div class="col timeslot">8:00</div>
+                <div class="col timeslot">9:00</div>
+                <div class="col timeslot">10:00</div>
+                <div class="col timeslot">11:00</div>
+                <div class="col timeslot">12:00</div>
+                <div class="col timeslot">13:00</div>
             </div>
             <div class="row">
-                <div class="col">
-                    <div class="row">
-                        <div class="modal-window__step">1</div>
-                        <div class="modal-window__paragraph"><span class="highlight-text">drag and drop</span> the activities of your choice into the space below <span class="highlight-text">each timeslot</span>
-                        </div>
+                <h3 class="col timeline__heading--icon">☀️</h3>
+                <!--<div class="col"><strong>Activity</strong></div>-->
+                <div class="col  activitySlot drag-col" data-id="1" ondrop="drop(event)" ondragover="allowDrop(event)">
                     </div>
-                </div>
-                <div class="col">
-                    <div class="row">
-                        <div class="modal-window__step">2</div>
-                        <div class="modal-window__paragraph"><span class="highlight-text">multiple activities</span> can be placed in the same timeslot
-                        </div>
+                <div class="col  activitySlot drag-col" data-id="2" ondrop="drop(event)" ondragover="allowDrop(event)">
                     </div>
-                </div>
-                <div class="col">
-                    <div class="row">
-                        <div class="modal-window__step">3</div>
-                        <div class="modal-window__paragraph">once the scheduled activities have been completed for the timeslot, press the <span class="highlight-text">question mark</span> underneath to uncover a <span class="highlight-text">gold star!</span>
-                        </div>
+                <div class="col  activitySlot drag-col" data-id="3" ondrop="drop(event)" ondragover="allowDrop(event)">
                     </div>
-                </div>
+                <div class="col  activitySlot drag-col" data-id="4" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div>
+                <div class="col  activitySlot drag-col" data-id="5" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div>
+                <div class="col  activitySlot drag-col" data-id="6" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div>
+                <div class="col  activitySlot drag-col" data-id="7" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div>
             </div>
-            <button class="modal-window__btn btn" id="modal-window-btn-routine">
-                let's start!
+            <div class="row">
+                <h3 class="col timeline__heading--morning"></h3>
+                <!--<div class="col"><strong>Done?</strong></div>-->
+                <div class="col completionSlot">
+                    ?</div>
+                <div class="col completionSlot">
+                    ?</div>
+                <div class="col completionSlot">
+                    ?</div>
+                <div class="col completionSlot">
+                    ?</div>
+                <div class="col completionSlot">
+                    ?</div>
+                <div class="col completionSlot">
+                    ?</div>
+                <div class="col completionSlot">
+                    ?</div>
+            </div>
+        </div>
+        <div class="timeline__afternoon">
+            <div class="timeline__time--afternoon row">
+                <div class="col timeline__heading--afternoon"><strong>afternoon</strong></div>
+                <!--<div class="col"><strong>Time</strong></div>-->
+                <div class="col timeslot">14:00</div>
+                <div class="col timeslot">15:00</div>
+                <div class="col timeslot">16:00</div>
+                <div class="col timeslot">17:00</div>
+                <div class="col timeslot">18:00</div>
+                <div class="col timeslot">19:00</div>
+                <div class="col timeslot">Bedtime</div>
+            </div>
+            <div class="row">
+                <h3 class="col timeline__heading--icon">🌙</h3>
+                <div class="col activitySlot drag-col" data-id="8" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div>
+                <div class="col activitySlot drag-col" data-id="9" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div>
+                <div class="col activitySlot drag-col" data-id="10" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div>
+                <div class="col activitySlot drag-col" data-id="11" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div>
+                <div class="col activitySlot drag-col" data-id="12" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div>
+                <div class="col activitySlot drag-col" data-id="13" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div>
+                <div class="col completionSlot" id="open-stars-modal">Tap here at bedtime
+                    </div>
+            </div>
+            <div class="row">
+                <h3 class="col timeline__heading--morning"></h3>
+                <div class="col completionSlot">
+                    ?</div>
+                <div class="col completionSlot">
+                    ?</div>
+                <div class="col completionSlot">
+                    ?</div>
+                <div class="col completionSlot">
+                    ?</div>
+                <div class="col completionSlot">
+                    ?</div>
+                <div class="col completionSlot">
+                    ?</div>
+                <div class="col">
+                    </div>
+            </div>
+        </div>
+        <div class="timeline__options">
+            <div class="row">
+                    <div class="col timeline__options--eating">
+                        <h3>Eating</h3>
+                        <div class=" eating drag-col" draggable="true" ondragstart="drag(event)" data-id="16">
+                            Breakfast <span class="icon">🥣</span></div>
+                        <div class=" eating drag-col" draggable="true" ondragstart="drag(event)" data-id="17">
+                            Snack <span class="icon">🍎</span></div>
+                        <div class=" eating drag-col" draggable="true" ondragstart="drag(event)" data-id="18">
+                            Lunch <span class="icon">🍽️</span></div>
+                        <div class=" eating drag-col" draggable="true" ondragstart="drag(event)" data-id="19">
+                            Dinner <span class="icon">🍽️</span></div>
+                        <div class=" eating drag-col" draggable="true" ondragstart="drag(event)" data-id="16a">
+                            <span class="icon">🥣</span></div>
+                    </div>
+                    <div class="col timeline__options--hygiene">
+                        <h3>Hygiene</h3>
+                        <div class=" hygiene" draggable="true" ondragstart="drag(event)" data-id="20a">
+                            Waking up <span class="icon">🌅</span></div>
+                        <div class=" hygiene" draggable="true" ondragstart="drag(event)" data-id="20">
+                            Getting dressed <span class="icon">👕</span></div>
+                        <div class=" hygiene" draggable="true" ondragstart="drag(event)" data-id="21">
+                            Brushing teeth <span class="icon">🪥</span></div>
+                        <div class=" hygiene" draggable="true" ondragstart="drag(event)" data-id="22">
+                            Brushing hair <span class="icon">🪥</span></div>
+                        <div class=" hygiene" draggable="true" ondragstart="drag(event)" data-id="23">
+                            Washing hands <span class="icon">👐</span></div>
+                        <div class=" hygiene" draggable="true" ondragstart="drag(event)" data-id="24">
+                            Toilet <span class="icon">🚽</span></div>
+                    </div>
+                    <div class="col timeline__options--sleep">
+                        <h3>Sleep</h3>
+                        <div class=" sleep" draggable="true" ondragstart="drag(event)" data-id="25">
+                            Naptime <span class="icon">🛏️</span></div>
+                        <div class=" sleep" draggable="true" ondragstart="drag(event)" data-id="26">
+                            Bedtime <span class="icon">🛏️</span></div>
+                    </div>
+                    <div class="col timeline__options--places">
+                        <h3>Places</h3>
+                        <div class=" places" draggable="true" ondragstart="drag(event)" data-id="27">
+                            Home <span class="icon">🏡</span></div>
+                        <div class=" places" draggable="true" ondragstart="drag(event)" data-id="28">
+                            Nursery <span class="icon">🏫</span></div>
+                        <div class=" places" draggable="true" ondragstart="drag(event)" data-id="29">
+                            School <span class="icon">🏫</span></div>
+                        <div class=" places" draggable="true" ondragstart="drag(event)" data-id="30">
+                            Playgroup <span class="icon">🏫</span></div>
+                    </div>
+                    <div class="col timeline__options--chores">
+                        <h3>Chores</h3>
+                        <div class=" chore" draggable="true" ondragstart="drag(event)" data-id="31">
+                            Shopping <span class="icon">🛒</span></div>
+                        <div class=" chore" draggable="true" ondragstart="drag(event)" data-id="32">
+                            Tidying <span class="icon">🗑️</span></div>
+                        <div class=" chore" draggable="true" ondragstart="drag(event)" data-id="33">
+                            Gardening <span class="icon">🌻</span></div>
+                        <div class=" chore" draggable="true" ondragstart="drag(event)" data-id="34">
+                            Cooking <span class="icon">🥄</span></div>
+                        <div class=" chore" draggable="true" ondragstart="drag(event)" data-id="35">
+                            Setting the table <span class="icon">🍴</span></div>
+                    </div>
+                    <div class="col timeline__options--play">
+                        <h3>Play</h3>
+                        <div class=" play" draggable="true" ondragstart="drag(event)" data-id="36">
+                            Park <span class="icon">🏞️</span></div>
+                        <div class=" play" draggable="true" ondragstart="drag(event)" data-id="37">
+                            Garden Play <span class="icon">🌳</span></div>
+                        <div class=" play" draggable="true" ondragstart="drag(event)" data-id="38">
+                            Arts <span class="icon">🎨</span></div>
+                        <div class=" play" draggable="true" ondragstart="drag(event)" data-id="39">
+                            Music <span class="icon">🎵</span></div>
+                        <div class=" play" draggable="true" ondragstart="drag(event)" data-id="40">
+                            Messy Play <span class="icon">💦</span></div>
+                        <div class=" play" draggable="true" ondragstart="drag(event)" data-id="41">
+                            Free Play <span class="icon">❔</span></div>
+                    </div>
+                    <div class="col timeline__options--education">
+                        <h3>Education</h3>
+                        <div class=" education" draggable="true" ondragstart="drag(event)" data-id="42">
+                            Reading <span class="icon">📖</span></div>
+                        <div class=" education" draggable="true" ondragstart="drag(event)" data-id="43">
+                            Phonics <span class="icon">🗣️</span></div>
+                        <div class=" education" draggable="true" ondragstart="drag(event)" data-id="44">
+                            Maths <span class="icon">🔢</span></div>
+                        <div class=" education" draggable="true" ondragstart="drag(event)" data-id="45">
+                            Science <span class="icon">🔭</span></div>
+                        <div class=" education" draggable="true" ondragstart="drag(event)" data-id="46">
+                            Roleplay <span class="icon">💭</span></div>
+                    </div>
+    </main>
+
+    <div class="modal-window__instructions" id="modal-window-routine">
+        <div class="modal-window__container">
+            <div class="modal-window__content">
+                <div class="modal-window__heading">
+                    How to create a daily routine board
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="row">
+                            <div class="modal-window__step">1</div>
+                            <div class="modal-window__paragraph"><span class="highlight-text">drag and drop</span> the activities of your choice into the space below <span class="highlight-text">each timeslot</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="row">
+                            <div class="modal-window__step">2</div>
+                            <div class="modal-window__paragraph"><span class="highlight-text">multiple activities</span> can be placed in the same timeslot
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="row">
+                            <div class="modal-window__step">3</div>
+                            <div class="modal-window__paragraph">once the scheduled activities have been completed for the timeslot, press the <span class="highlight-text">question mark</span> underneath to uncover a <span class="highlight-text">gold star!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="modal-window__btn btn" id="modal-window-btn-routine">
+                    let's start!
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-window__stars hidden" id="modal-window-stars">
+        <div class="modal-window__container">
+            <div class="modal-window__content" id="modal-window-stars-content">
+            </div>
+            <button class="modal-window__btn btn" id="modal-window-btn-stars">
+                goodnight
             </button>
         </div>
     </div>
-</div>
 
-<div class="modal-window__stars hidden" id="modal-window-stars">
-    <div class="modal-window__container">
-        <div class="modal-window__content" id="modal-window-stars-content">
+    <div class="modal-window__nightscreen hidden" id="modal-nightscreen">
+        <div class="modal-window__container-night">
+            <video loop autoplay src="/src/stars-video.mp4" class="w-100 rounded"></video>
         </div>
-        <button class="modal-window__btn btn" id="modal-window-btn-stars">
-            goodnight
-        </button>
-    </div>
-</div>
-
-<div class="modal-window__nightscreen hidden" id="modal-nightscreen">
-    <div class="modal-window__container-night">
-        <video loop autoplay src="/src/stars-video.mp4" class="w-100 rounded"></video>
-    </div>
-    <div class="modal-window__nightscreen--overlay">
-    </div>
-    <div class="modal-window__btn btn-night">
-            <a href="/routine.html" class="modal-window__btn--link btn-night__link">
-                return to routine
-            </a>
+        <div class="modal-window__nightscreen--overlay">
         </div>
-</div>
-
-<footer class="footer">
-        <div class="row">
-            <div class="col-sm-8">
-                <div class="footer__app-info">
-                    <img src="/src/img/rAutine-logo-white.png" alt="rAutine logo" class="footer__logo">
-                    <p class="footer__app-description">
-                        an application to provide a visual routine for children who struggle with transitions in their daily routine
-                    </p>
-                </div>
+        <div class="modal-window__btn btn-night">
+                <a href="/routine.html" class="modal-window__btn--link btn-night__link">
+                    return to routine
+                </a>
             </div>
-            <div class="col-sm-4 footer__attribution">
-                <div class="footer__attribution--design">
-                    designed by helen tagliarini for the purposes of educational support - please do not copy or use for the purposes of commerce.
-                </div>
-                <br />
-                <div class="footer__attribution--logo">
-                    <a href="https://htcoding.netlify.app" target="blank" rel="noopener noreferrer">
-                        <img src="/src/img/helen-tagliarini-logo-back-light.png" alt="HT Coding logo" class="brand-logo">
-                    </a>
-                </div>
-                <div class="footer__attribution--location">
-                    london, united kingdom
-                </div>
-                <br />
-                <div class="footer__attribution--music">
-                    music provided by
-                    child dreams by keys of moon | https://soundcloud.com/keysofmoon
-                    music promoted by https://www.chosic.com/free-music/all/
-                    creative commons cc by 4.0
-                    https://creativecommons.org/licenses/by/4.0/
-                </div>
-            </div>
-        </div>
+    </div>
+
+    <footer class="footer" id="footer">
+        
     </footer>
 
   </body>

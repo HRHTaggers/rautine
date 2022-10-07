@@ -32,9 +32,8 @@ const activityDescThen = document.querySelector(`.display-panel__description--th
 const timeRemainingThen = document.querySelector(`.display-panel__time--then`);
 const timingThen = document.querySelector(`.routine-input__form--timing-then`);
 
-//Timeline
-const timelineContainer = document.querySelector(`.timeline-container__test`);
-const progressContainer = document.querySelector(`.timeline__progress`);
+//Footer
+const footer = document.getElementById(`footer`);
 
 //Buttons
 const submitBtn = document.querySelector(`.routine-input__form--btn`);
@@ -194,6 +193,47 @@ setInterval(() => {
     }, 1000
 );
 
+//FOOTER GENERATION
+const footerGenerator = function() {
+  const markup = `
+    <div class="row">
+            <div class="col-sm-8">
+                <div class="footer__app-info">
+                    <img src="/src/img/rAutine-logo-white.png" alt="rAutine logo" class="footer__logo">
+                    <p class="footer__app-description">
+                        an application to provide a visual routine for children who struggle with transitions in their daily routine
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-4 footer__attribution">
+                <div class="footer__attribution--design">
+                    designed by helen tagliarini for the purposes of educational support | please do not copy or use for the purposes of commerce.
+                </div>
+                <br />
+                <div class="footer__attribution--logo">
+                    <a href="https://htcoding.netlify.app" target="blank" rel="noopener noreferrer">
+                        <img src="/src/img/helen-tagliarini-logo-back-light.png" alt="HT Coding logo" class="brand-logo">
+                    </a>
+                </div>
+                <div class="footer__attribution--location">
+                    london, united kingdom
+                </div>
+                <br />
+                <div class="footer__attribution--music">
+                    music provided by
+                    child dreams by keys of moon | https://soundcloud.com/keysofmoon
+                    music promoted by https://www.chosic.com/free-music/all/
+                    creative commons cc by 4.0
+                    https://creativecommons.org/licenses/by/4.0/
+                </div>
+            </div>
+        </div>
+  `;
+  footer.innerHTML = markup;
+};
+
+footerGenerator();
+
 //DYNAMIC DROPDOWN - ACTIVITIES
 const createDropdown = function (array, i = 0, parentEl) {
   for (i = 0; i < array.length; i++) {
@@ -272,43 +312,6 @@ const setStartTimeThen = (timingNext) => {
 
 //EVENT LISTENERS
 submitBtn.addEventListener(`click`, selectActivity);
-
-/*
-//TIMELINE HTML
-//GENERATE TIMELINE HOURS
-const generateTimeline = (i = 6, parentEl) => {
-    let hour = 6;
-    for (i = 6; i < 21; i++) {
-        hour++;
-        const time = document.createElement(`div`);
-        time.textContent = `${hour}:00`;
-        time.setAttribute(`class`, `${hour}00 timeline-hour col`);
-        time.setAttribute(`id`, `${hour}`);
-        parentEl.append(time);
-
-    };
-};
-
-//GENERATE TIMELINE PROGRESS COLOR CODE
-const generateProgressLine = (i = 6, parentEl) => {
-  let hours = new Date().getHours();
-  let currentHour = 6;
-  for (i = 6; i < 24; i++) {
-    currentHour++;
-    const progress = document.createElement(`div`);
-    progress.textContent = currentHour;
-    progress.style.color = `transparent`;
-    progress.setAttribute(`class`, `${currentHour}00 progress-hour col`);
-    progress.setAttribute(`id`, `${currentHour}-progress`);
-    if (currentHour < hours)
-      progress.style.backgroundColor = `#5fdc63`;
-    if (currentHour > hours)
-        progress.style.backgroundColor = `#a9dfef`;
-    if (currentHour === hours) progress.style.backgroundColor = `#febc76`;
-    parentEl.append(progress);
-  }
-};
-*/
 
 //INITIALIZATION FUNCTION
 function init() {
