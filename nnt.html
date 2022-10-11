@@ -23,35 +23,9 @@
   </head>
   <body>
 
-    <div class="header">
-        <div class="header__date">Date</div>
-        <img src="/src/img/rAutine-logo-white.png" alt="rAutine logo" class="header__logo" />
-    </div>
+    <header class="header"></header>
 
-    <nav class="nav">
-        <ul class="nav__list">
-            <li class="nav__item nav__item nav__item">
-                <a href="/index.html" class="nav__item--link">
-                    home
-                </a>
-            </li>
-            <li class="nav__item">
-                <a href="/flashcard.html" class="nav__item--link">
-                    flashcard
-                </a>
-            </li>
-            <li class="nav__item nav__item nav__item">
-                <a href="/nnt.html" class="nav__item--link nav__item--link-active">
-                    now|next|then
-                </a>
-            </li>
-            <li class="nav__item">
-                <a href="/routine.html" class="nav__item--link">
-                    daily routine
-                </a>
-            </li>
-        </ul>
-    </nav>
+    <nav class="nav"></nav>
 
     <h2 class="subheader-1">
         input your activities
@@ -206,11 +180,12 @@
     </div>
 </div>
 
-    <footer class="footer" id="footer">
-        
-    </footer>
+    <footer class="footer" id="footer"></footer>
     
   </body>
   <script src="https://kit.fontawesome.com/90f11e2679.js" crossorigin="anonymous"></script>
-  <script src="script.js"></script>
+  <script src="/js/pages/script.js"></script>
+  <script type="module" src="/js/components/header.js"></script>
+  <script src="/js/components/nav.js"></script>
+  <script src="/js/components/footer.js"></script>
 </html>

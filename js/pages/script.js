@@ -8,8 +8,6 @@ const dropdownContainerActivityNext = document.querySelector(`.routine-input__fo
 const dropdownContainerTimingNow = document.querySelector(`.routine-input__form--timing-now`);
 const dropdownContainerTimingNext = document.querySelector(`.routine-input__form--timing-next`);
 const dropdownContainerTimingThen = document.querySelector(`.routine-input__form--timing-then`);
-const dropdownContainersAll = document.querySelectorAll(`.routine-input__form--dropdown-container`);
-const timelineDropdownActivity = document.querySelector(`.timeline__dropdown-activity`);
 const headerDate = document.querySelector(`.header__date`);
 
 //Modal Window
@@ -31,6 +29,9 @@ const activityIconThen = document.querySelector(`.display-panel__icon--then`);
 const activityDescThen = document.querySelector(`.display-panel__description--then`);
 const timeRemainingThen = document.querySelector(`.display-panel__time--then`);
 const timingThen = document.querySelector(`.routine-input__form--timing-then`);
+
+//Header
+const header = document.getElementById(`header`);
 
 //Footer
 const footer = document.getElementById(`footer`);
@@ -194,7 +195,7 @@ setInterval(() => {
 );
 
 //FOOTER GENERATION
-const footerGenerator = function() {
+/*const footerGenerator = function() {
   const markup = `
     <div class="row">
             <div class="col-sm-8">
@@ -233,6 +234,7 @@ const footerGenerator = function() {
 };
 
 footerGenerator();
+*/
 
 //DYNAMIC DROPDOWN - ACTIVITIES
 const createDropdown = function (array, i = 0, parentEl) {

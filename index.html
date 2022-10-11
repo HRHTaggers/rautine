@@ -23,34 +23,9 @@
   </head>
   <body>
 
-    <div class="header">
-        <div class="header__date">Date</div>
-        <img src="/src/img/rAutine-logo-white.png" alt="rAutine logo" class="header__logo" />
-    </div>
+    <header class="header" id="header"></header>
 
     <nav class="nav">
-        <ul class="nav__list">
-            <li class="nav__item">
-                <a href="/index.html" class="nav__item--link nav__item--link-active">
-                    home
-                </a>
-            </li>
-            <li class="nav__item">
-                <a href="/flashcard.html" class="nav__item--link">
-                    flashcard
-                </a>
-            </li>
-            <li class="nav__item">
-                <a href="/nnt.html" class="nav__item--link">
-                    now|next|then
-                </a>
-            </li>
-            <li class="nav__item">
-                <a href="/routine.html" class="nav__item--link">
-                    daily routine
-                </a>
-            </li>
-        </ul>
     </nav>
 
     <main class="main">
@@ -60,61 +35,60 @@
             </h2>
             <div class="introduction__paragraph u-margin-top-small">
                 <span class="highlight-text">transitions</span> can be difficult for children to understand and can make them feel <span class="highlight-text">anxious</span>, <span class="highlight-text">concerned</span> and <span class="highlight-text">distressed</span>
-                <div class="row">
-                    <!--<div class="col-sm highlight-text">anxious</div>
-                    <div class="col-sm">concerned</div>
-                    <div class="col-sm">distressed</div>-->
-                </div>
             </div>
-            <div class="introduction__paragraph">this app aims to provide <span class="highlight-text">simple visual tools</span> to help reduce these feelings and help your child deal with these changes by making them <span class="highlight-text">clear</span>, <span class="highlight-text">understandable</span> and <span class="highlight-text">foreseeable</span>
+            <div class="introduction__paragraph">
+                this app aims to provide <span class="highlight-text">simple visual tools</span> to help reduce these feelings and help your child deal with these changes by making them <span class="highlight-text">clear</span>, <span class="highlight-text">understandable</span> and <span class="highlight-text">foreseeable</span>
             </div>
-            <div class="introduction__paragraph">no need for carrying physical boards/flashcards/timers
-            <div class="highlight-text--large">just one app that you can carry anywhere at any time</div>
+            <div class="introduction__paragraph">
+                no need for carrying physical boards/flashcards/timers
+            </div>
+            <div class="highlight-text--large">
+                just one app that you can carry anywhere at any time
+            </div>
         </section>
 
-    <section class="tools">
-        <h2 class="tools__subheader subheader-2">
-            explore
-        </h2>
-        <div class="row">
-            <div class="tools__panel--1 col-sm">
-                <a href="flashcard.html" class="tools__panel--link">
-                    <div class="tools__panel--icon">⚡</div>
-                    <div class="tools__panel--heading">
-                        flashcards
-                    </div>
-                    <div class="tools__panel--caption">
-                        show visual of a selected activity/location
-                    </div>
-                </a>
+        <section class="tools">
+            <h2 class="tools__subheader subheader-2">
+                explore
+            </h2>
+            <div class="row">
+                <div class="tools__panel--1 col-sm">
+                    <a href="flashcard.html" class="tools__panel--link">
+                        <div class="tools__panel--icon">⚡</div>
+                        <div class="tools__panel--heading">
+                            flashcards
+                        </div>
+                        <div class="tools__panel--caption">
+                            show visual of a selected activity/location
+                        </div>
+                    </a>
+                </div>
+                <div class="tools__panel--2 col-sm">
+                    <a href="nnt.html" class="tools__panel--link">
+                        <div class="tools__panel--icon">⌛</div>
+                        <div class="tools__panel--heading">
+                            now | next | then
+                        </div>
+                        <div class="tools__panel--caption">
+                            signal upcoming transitions in the present moment
+                        </div>
+                    </a>
+                </div>
+                <div class="tools__panel--3 col-sm">
+                    <a href="routine.html" class="tools__panel--link">
+                        <div class="tools__panel--icon">⭐</div>
+                        <div class="tools__panel--heading">
+                            daily routine
+                        </div>
+                        <div class="tools__panel--caption">
+                            visualize the upcoming day in hourly slots & reward activity completion
+                        </div>
+                    </a>
+                </div>
             </div>
-            <div class="tools__panel--2 col-sm">
-                <a href="nnt.html" class="tools__panel--link">
-                    <div class="tools__panel--icon">⌛</div>
-                    <div class="tools__panel--heading">
-                        now | next | then
-                    </div>
-                    <div class="tools__panel--caption">
-                        signal upcoming transitions in the present moment
-                    </div>
-                </a>
-            </div>
-            <div class="tools__panel--3 col-sm">
-                <a href="routine.html" class="tools__panel--link">
-                    <div class="tools__panel--icon">⭐</div>
-                    <div class="tools__panel--heading">
-                        daily routine
-                    </div>
-                    <div class="tools__panel--caption">
-                        visualize the upcoming day in hourly slots & reward activity completion
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
+        </section>
 
     </main>
-
 
     <div class="modal-window__cookies hidden" id="modal-window-cookies">
         <div class="modal-window__container">
@@ -138,11 +112,11 @@
         </div>
     </div>
 
-    <footer class="footer" id="footer">
-        
-    </footer>
+    <footer class="footer" id="footer"></footer>
 
   </body>
-  <script src="https://kit.fontawesome.com/90f11e2679.js" crossorigin="anonymous"></script>
-  <script src="script.js"></script>
+  <script src="/js/pages/script.js"></script>
+  <script type="module" src="/js/components/header.js"></script>
+  <script src="/js/components/nav.js"></script>
+  <script src="/js/components/footer.js"></script>
 </html>

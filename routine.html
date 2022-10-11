@@ -25,35 +25,9 @@
 
   <body>
 
-    <header class="header">
-          <div class="header__date header__date--routine"></div>
-          <img src="/src/img/rAutine-logo-white.png" alt="rAutine logo" class="header__logo" />
-    </header>
+    <header class="header"></header>
 
-    <nav class="nav">
-        <ul class="nav__list">
-            <li class="nav__item nav__item nav__item">
-                <a href="/index.html" class="nav__item--link">
-                    home
-                </a>
-            </li>
-            <li class="nav__item">
-                <a href="/flashcard.html" class="nav__item--link">
-                    flashcard
-                </a>
-            </li>
-            <li class="nav__item nav__item nav__item">
-                <a href="/nnt.html" class="nav__item--link">
-                    now|next|then
-                </a>
-            </li>
-            <li class="nav__item">
-                <a href="/routine.html" class="nav__item--link nav__item--link-active">
-                    daily routine
-                </a>
-            </li>
-        </ul>
-    </nav>
+    <nav class="nav"></nav>
     
     <div class="subheader-1">
             <span id="weekday-markup"></span> - what is happening today?
@@ -63,7 +37,6 @@
         <div class="timeline__morning">
             <div class="timeline__time--morning row">
                 <div class="col timeline__heading--morning"><strong>morning</strong></div>
-                <!--<div class="col"><strong>Time</strong></div>-->
                 <div class="col timeslot">7:00</div>
                 <div class="col timeslot">8:00</div>
                 <div class="col timeslot">9:00</div>
@@ -74,25 +47,23 @@
             </div>
             <div class="row">
                 <h3 class="col timeline__heading--icon">☀️</h3>
-                <!--<div class="col"><strong>Activity</strong></div>-->
-                <div class="col  activitySlot drag-col" data-id="1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="col activitySlot drag-col" data-id="1" id="activity-0700" ondrop="drop(event)" ondragover="allowDrop(event)">
                     </div>
-                <div class="col  activitySlot drag-col" data-id="2" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="col activitySlot drag-col" data-id="2" ondrop="drop(event)" ondragover="allowDrop(event)">
                     </div>
-                <div class="col  activitySlot drag-col" data-id="3" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="col activitySlot drag-col" data-id="3" ondrop="drop(event)" ondragover="allowDrop(event)">
                     </div>
-                <div class="col  activitySlot drag-col" data-id="4" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="col activitySlot drag-col" data-id="4" ondrop="drop(event)" ondragover="allowDrop(event)">
                     </div>
-                <div class="col  activitySlot drag-col" data-id="5" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="col activitySlot drag-col" data-id="5" ondrop="drop(event)" ondragover="allowDrop(event)">
                     </div>
-                <div class="col  activitySlot drag-col" data-id="6" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="col activitySlot drag-col" data-id="6" ondrop="drop(event)" ondragover="allowDrop(event)">
                     </div>
-                <div class="col  activitySlot drag-col" data-id="7" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="col activitySlot drag-col" data-id="7" ondrop="drop(event)" ondragover="allowDrop(event)">
                     </div>
             </div>
             <div class="row">
                 <h3 class="col timeline__heading--morning"></h3>
-                <!--<div class="col"><strong>Done?</strong></div>-->
                 <div class="col completionSlot">
                     ?</div>
                 <div class="col completionSlot">
@@ -112,7 +83,6 @@
         <div class="timeline__afternoon">
             <div class="timeline__time--afternoon row">
                 <div class="col timeline__heading--afternoon"><strong>afternoon</strong></div>
-                <!--<div class="col"><strong>Time</strong></div>-->
                 <div class="col timeslot">14:00</div>
                 <div class="col timeslot">15:00</div>
                 <div class="col timeslot">16:00</div>
@@ -306,10 +276,11 @@
             </div>
     </div>
 
-    <footer class="footer" id="footer">
-        
-    </footer>
+    <footer class="footer" id="footer"></footer>
 
   </body>
-  <script src="script-routine.js" ></script>
+  <script src="/js/pages/script-routine.js" ></script>
+  <script type="module" src="/js/components/header.js"></script>
+  <script src="/js/components/nav.js"></script>
+  <script src="/js/components/footer.js"></script>
 </html>

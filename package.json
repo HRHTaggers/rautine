@@ -1,5 +1,29 @@
 {
+  "name": "rautine",
+  "version": "1.0.0",
+  "description": "Pictorial app for flagging transitions/routine stages for autistic children",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HRHTaggers/rautine.git"
+  },
+  "author": "\"Helen Tagliarini\"",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HRHTaggers/rautine/issues"
+  },
+  "homepage": "https://github.com/HRHTaggers/rautine#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.7.0",
+    "parcel": "^2.7.0",
+    "sass": "^1.26.10"
+  },
   "dependencies": {
+    "core-js": "^3.24.1",
+    "regenerator-runtime": "^0.13.9",
     "mobile-drag-drop": "^3.0.0-beta.0"
   }
 }
