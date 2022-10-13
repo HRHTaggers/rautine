@@ -14,11 +14,6 @@ export const navView = function() {
                 </a>
             </li>
             <li class="nav__item nav__item nav__item">
-                <a href="/activity.html" class="nav__item--link">
-                    personalization
-                </a>
-            </li>
-            <li class="nav__item nav__item nav__item">
                 <a href="/nnt.html" class="nav__item--link">
                     now|next|then
                 </a>
@@ -31,5 +26,3 @@ export const navView = function() {
         </ul>
     `;
 };
-
-navView();

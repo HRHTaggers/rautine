@@ -11,7 +11,7 @@ const openStarModal = function() {
   openRecognitionModal.addEventListener(`click`, () => {
     modalWindowRecognition.classList.remove(`hidden`);
 
-    i = 1;
+    let i = 1;
     completionSlots.forEach((completionSlot) => {
       if(completionSlot.textContent === `*`) {
         i++;

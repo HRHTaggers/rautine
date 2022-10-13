@@ -13,7 +13,7 @@ export const footerView = function() {
                 </div>
                 <div class="col-sm-4 footer__attribution">
                     <div class="footer__attribution--design">
-                        designed by helen tagliarini for the purposes of educational support | please do not copy or use for the purposes of commerce.
+                        designed by helen tagliarini for the purposes of educational support | please do not copy or use for the purposes of commerce
                     </div>
                     <br />
                     <div class="footer__attribution--logo">
