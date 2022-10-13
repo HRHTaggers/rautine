@@ -3,19 +3,23 @@
 import { timeUpWarningAudio, fiveMinuteWarningAudio, submitBtn, formInput, timeRemainingNext, timeRemainingThen, timingNow, timingNext, timingThen, activityIconNext, activityIconNow, activityIconThen, timeRemainingNow, modalButtonNNT, modalWindowNNT, activityDescNext,
 activityDescNow, activityDescThen, dropdownContainerActivityNext, dropdownContainerActivityNow, dropdownContainerActivityThen, dropdownContainerTimingNext, dropdownContainerTimingNow, dropdownContainerTimingThen } from "../selectors.js";
 import { createDropdown } from "../components/dropdown.js";
+import { closeModal } from "../components/closeModal.js";
 import { state } from "../components/model.js";
 import { headerView } from "../components/header.js";
 import { navView } from "../components/nav.js";
 import { footerView } from "../components/footer.js";
 
 //MODAL WINDOW REVEAL - INDEX
-const closeNNTModal = function() {
+/*const closeNNTModal = function() {
   modalButtonNNT.addEventListener(`click`, function () {
       modalWindowNNT.classList.add(`hidden`);
     });
 };
 
 closeNNTModal();
+*/
+
+closeModal(modalButtonNNT, modalWindowNNT);
 
 //SET TIME
 setInterval(() => { 

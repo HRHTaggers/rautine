@@ -66,6 +66,33 @@ export const activityDescThen = document.querySelector(
 export const timeRemainingThen = document.querySelector(`.display-panel__time--then`);
 export const timingThen = document.querySelector(`.routine-input__form--timing-then`);
 
+//ROUTINE PAGE - Timeslots
+export const timeslots = document.querySelectorAll(`.timeslot`);
+export const activitySlots = document.querySelectorAll(`.activitySlot`);
+export const completionSlots = document.querySelectorAll(`.completionSlot`);
+export const weekdayMarkup = document.getElementById(`weekday-markup`);
+
+export const modalWindowRoutine =
+  document.getElementById(`modal-window-routine`);
+export const modalButtonRoutine = document.getElementById(
+  `modal-window-btn-routine`
+);
+
+//ROUTINE PAGE - Recognition Modal
+export const modalWindowRecognition =
+  document.getElementById(`modal-window-stars`);
+export const modalContentRecognition = document.getElementById(
+  `modal-window-stars-content`
+);
+export const modalButtonRecognition = document.getElementById(
+  `modal-window-btn-stars`
+);
+export const openRecognitionModal = document.getElementById(`open-stars-modal`);
+export const modalNightscreen = document.getElementById(`modal-nightscreen`);
+
+
 //AUDIO
 export const fiveMinuteWarningAudio = new Audio(`src/5-min-warning.wav`);
 export const timeUpWarningAudio = new Audio(`src/time-up-warning-mp3.mp3`);
+export const starAudio = new Audio(`src/star-audio.wav`);
+export const lullabyAudio = new Audio(`src/lullaby.mp3`);
