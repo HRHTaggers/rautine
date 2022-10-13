@@ -40,7 +40,7 @@ export const headerView = function() {
 
       //Insert date & time to DOM
       const currentTime = `${weekday}, ${date} ${month} ${year}, ${
-        hours < 12 ? `0` : ``
+        hours < 10 ? `0` : ``
       }${hours}:${minutes < 10 ? `0` : ``}${minutes}`;
       const headerDate = document.querySelector(`.header__date`);
       headerDate.innerHTML = `${currentTime}`;
