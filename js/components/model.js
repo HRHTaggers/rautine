@@ -1,3 +1,4 @@
+//VISUAL DATA
 export const state = {
   activityData: [
     {
@@ -94,11 +95,15 @@ export const state = {
   bookmarks: [],
 };
 
-export const createNewActivity = function(input) {
-    const activity = input;
-    return {
-        name: activity.name,
-        category: activity.category,
-        icon: activity.icon,
-    };
+//AUDIO DATA
+export const fiveMinuteWarningAudio = new Audio(`../src/5-min-warning.wav`);
+export const timeUpWarningAudio = new Audio(`../src/time-up-warning-mp3.mp3`);
+
+export const createNewActivity = function (input) {
+  const activity = input;
+  return {
+    name: activity.name,
+    category: activity.category,
+    icon: activity.icon,
+  };
 };

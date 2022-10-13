@@ -32,17 +32,22 @@
     </h2>
 
     <main class="activity">
+        <div class="under-construction">
+            <div>Under construction</div>
+            <div>🚧</div>
+        </div>
+
         <section class="selection">
             <label class="input__form--label">select the flashcard activity</label>
-                <select name="dropdown" class="input__form--dropdown-container" id="flashcard-dropdown">
+                <select name="dropdown" class="input__form--dropdown-container" id="activity-dropdown">
 
                 </select>
-            <button class="btn" id="display-flashcard-btn" onclick="setVisual()">display flashcard</button>
-            <button class="btn-clear" id="clear-flashcard-btn" onclick="clearVisuals()">clear display</button>
+            <button class="btn" id="display-activity-btn" onclick="setVisual()">display flashcard</button>
+            <button class="btn-clear" id="clear-activity-btn">clear display</button>
         </section>
         <section class="display-panel">
             <div class="display-panel__container">
-                <div class="row display-panel__body" id="display-panel-body">
+                <div class="row display-panel__body" id="display-activity-panel-body">
                 </div>
             </div>
         </section>
@@ -50,8 +55,7 @@
 
     <footer class="footer" id="footer"></footer>
 
-    <script type="module" src="/js/components/header.js"></script>
-    <script src="/js/components/nav.js"></script>
-    <script src="/js/components/footer.js"></script>
+    <script type="module" src="/js/pages/activity.js"></script>
+
   </body>
 </html>

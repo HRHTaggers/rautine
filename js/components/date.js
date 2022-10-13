@@ -37,7 +37,7 @@
 
         //Insert date & time to DOM
         const currentTime = `${weekday}, ${date} ${month} ${year}, ${
-          hours < 12 ? `0` : ``
+          hours < 10 ? `0` : ``
         }${hours}:${minutes < 10 ? `0` : ``}${minutes}`;
         console.log(currentTime);
       }

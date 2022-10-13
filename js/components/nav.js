@@ -1,6 +1,7 @@
-const navView = function() {
-    const navPanel = document.querySelector(`.nav`);
-    navPanel.innerHTML = `
+import { nav } from "../selectors.js";
+
+export const navView = function() {
+    nav.innerHTML = `
         <ul class="nav__list">
             <li class="nav__item nav__item nav__item">
                 <a href="/index.html" class="nav__item--link">
@@ -24,7 +25,7 @@ const navView = function() {
             </li>
             <li class="nav__item">
                 <a href="/routine.html" class="nav__item--link">
-                    daily routine
+                    routine
                 </a>
             </li>
         </ul>

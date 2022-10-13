@@ -1,5 +1,6 @@
-const footerView = function() {
-    const footer = document.querySelector(`.footer`);
+import { footer } from "../selectors.js";
+
+export const footerView = function() {
     footer.innerHTML = `
         <div class="row">
                 <div class="col-sm-8">
@@ -35,5 +36,3 @@ const footerView = function() {
             </div>
     `;
 }
-
-footerView();

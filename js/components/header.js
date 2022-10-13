@@ -1,4 +1,6 @@
-const headerView = function() {
+import { header } from "../selectors.js";
+
+export const headerView = function() {
 
   setInterval(() => {
     function setDate() {
@@ -46,12 +48,9 @@ const headerView = function() {
     setDate();
   }, 1000);
 
-    const header = document.querySelector(`.header`);
     header.innerHTML = `
         <div class="header__date header__date--flashcard"></div>
         <img src="/src/img/rAutine-logo-white.png" alt="rAutine logo" class="header__logo" />
     `;
 
 }
-
-headerView();
