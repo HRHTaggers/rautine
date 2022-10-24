@@ -1,0 +1,22 @@
+.flashcard-panel {
+    &__instructions {
+        font-size: 1.3rem;
+        transition: 200ms;
+
+        &--symbol {
+            padding-top: 1rem;
+            font-size: 3rem;
+            animation:  1s ease-in 0.5s infinite alternate slideup;
+        }
+
+        @keyframes slideup {
+            from {
+                transform: translateY(-1rem);
+            }
+
+            to {
+                transform: translateY(0rem);
+            }
+        }
+    }
+}

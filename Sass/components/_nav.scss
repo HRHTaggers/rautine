@@ -3,6 +3,7 @@
     top: 2rem;
     right: 2rem;
     display: flex;
+    line-height: 1.2rem;
     color: $text-color-trace;
     font-size: 0.75rem;
     text-align: right;
@@ -19,10 +20,12 @@
         &--link {
             text-decoration: none;
             color: $text-color-faint;
+            transition: 200ms all ease-in-out;
 
             &:hover {
                 color: white;
                 background-color: none;
+                font-size: 0.8rem;
                 cursor: pointer;
             }
         }
