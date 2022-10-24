@@ -27,7 +27,7 @@
 
     <nav class="nav"></nav>
 
-    <h2 class="subheader-1">
+    <h2 class="subheader-1" id="flashcard-subheader">
         select an activity for the flashcard images
     </h2>
 
@@ -37,12 +37,13 @@
                 <select name="dropdown" class="input__form--dropdown-container" id="flashcard-dropdown">
 
                 </select>
-            <button class="btn" id="display-flashcard-btn" onclick="setVisual()">display flashcard</button>
-            <button class="btn-clear" id="clear-flashcard-btn" onclick="clearVisuals()">clear display</button>
+            <button class="btn" id="display-flashcard-btn">display flashcard</button>
+            <button class="btn-clear" id="clear-flashcard-btn">clear display</button>
         </section>
+        <section class="personalization" id="flashcard-personalization-heading"></section>
         <section class="display-panel">
             <div class="display-panel__container">
-                <div class="row display-panel__body" id="display-panel-body">
+                <div class="row display-panel__body display-panel__flashcard" id="display-panel-body">
                 </div>
             </div>
         </section>
