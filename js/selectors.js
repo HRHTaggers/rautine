@@ -3,6 +3,13 @@ export const footer = document.querySelector(`.footer`);
 export const header = document.querySelector(`.header`);
 export const nav = document.querySelector(`.nav`);
 
+//INDEX PAGE
+export const personalizeName = document.getElementById(`personalization-name`);
+export const personalizePetname = document.getElementById(`personalization-petname`);
+export const personalizeBtn = document.getElementById(`personalization-btn`);
+export const personalizationForm = document.getElementById(`personalization-form`);
+export const personalizationSelect = document.getElementById(`personalization-child-selection`);
+
 //ACTIVITY PAGE
 export const activityDropdown = document.getElementById(`activity-dropdown`);
 export const activityDisplayCard = document.getElementById(`display-activity-panel-body`);
@@ -10,12 +17,15 @@ export const displayActivityBtn = document.getElementById(`display-activity-btn`
 export const clearActivityBtn = document.getElementById(`clear-activity-btn`);
 
 //FLASHCARD PAGE
+export const flashcardSubheader = document.getElementById(`flashcard-subheader`);
 export const flashcardDropdown = document.getElementById(`flashcard-dropdown`);
 export const flashcardDisplay = document.getElementById(`display-panel-body`);
 export const flashcardIcon = document.getElementById(`display-panel-icon`);
 export const flashcardTitle = document.getElementById(`display-panel-title`);
 export const displayFlashcardBtn = document.getElementById(`display-flashcard-btn`);
 export const clearFlashcardBtn = document.getElementById(`clear-flashcard-btn`);
+export const flashcardPersonalizationHeading = document.getElementById(`flashcard-personalization-heading`);
+export const flashcardDisplayColumn = document.querySelector(`.display-panel__flashcard`);
 
 //NNT PAGE
 export const formInput = document.querySelector(`.routine-input__form`);
