@@ -20,6 +20,7 @@ createDropdown(state.activityData, 0, flashcardDropdown);
 displayFlashcardBtn.addEventListener("click", function () {
   setVisual(flashcardDropdown, flashcardDisplay);
   flashcardPersonalizationHeading.classList.remove(`hidden`);
+  flashcardDisplay.classList.remove(`hidden`);
   flashcardPersonalizationHeading.innerHTML = `
     <div class="flashcard-panel__instructions">tap on the picture to choose your activity</div>
     <div class="flashcard-panel__instructions--symbol">👇</div>
